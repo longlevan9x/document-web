@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>js jquery</title>
+	<!-- <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8" async defer></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+	<script  type="text/javascript" charset="utf-8" async defer>
+		//có  val thì là thay đổi giá trị không thì là lấy ra giá trị
+		$(document).ready(function() {
+			// alert("Hello world!");		
+			// $("button").click(function() {
+			// 	alert("Hello World!");
+			//});
+			$("#mybtn").click(function() {
+				// var myText=$('div.parent p:last-child').text();
+				// alert(myText);
+				var myText2=$('div.parent p:last-child').addClass('myclass');// không nên dùng .css
+				$('#select').html('<option value="">abc</option>');
+
+				//$(this).next().attr('type','text');	// nhận phần tử nằm kế sau
+				$(this).prev().prev("input").attr('type','text');
+
+				$("p").css({
+					color: 'blue',
+					letterSpacing: '4px'
+				});
+				var Width1=$('div.parent').innerWidth();
+				console.log(Width1);
+
+				$('p.myp6').after('<h2>Lê Văn  Long</h2>');
+				$('p.myp6').before('<h2>Lê Văn  Long</h2>');
+				if ($("h2").length) { // kiểm tra một phần tử có trong đoạn mã html hay không
+					$("#mybtn2").click(function () {
+						$("h2").empty();
+					});
+				}
+
+
+
+
+				// $('div.parent').fadeOut('slow',function () {
+				// 	alert("Ẩn xong");
+				// });
+				$('div.parent').slideToggle('slow',function () { // thả xuống
+					alert("Ẩn xong");
+				});
+				// $('div.parent').toggle('slow',function () { // thả xuống
+				// 	alert("Ẩn xong");
+				// });
+				// $('div.parent').slideDown('slow',function () { // thả xuống
+				// 	alert("Ẩn xong");
+				// });
+			});
+			$("#mybtn2").click(function() {
+				// var myText=$('div.parent p:last-child').text();
+				// alert(myText);
+				// var myText2=$('div.parent p:last-child').removeClass('myclass');// không nên dùng .css
+
+
+
+				// var input2=$('div.parent p:nth-child(2) input').attr("name");
+				// $('div.parent p:nth-child(4)').html(input2);
+				// $('div.parent p:first-child input').val(input2);
+// is thường dùng cho các thẻ input
+				$("p").eq(3).addClass('myclass');
+				$("p").filter('p.myp6').addClass('myclass');
+				var check1=$("div p:nth-child(2) input").is(':checked');
+				check1 ? console.log("ĐÚNG") : console.log("SAI"); 
+				var check2=$("div p:nth-child(2) input").not(':checked'); // chỉ xét vế trước
+				check2 ? console.log("ĐÚNG") : console.log("SAI");  
+				
+				// $('div.parent p').not('p.myp5').addClass('myclass'); // thẻ p nào không có class thì được sử dụng
+				$('div.parent').find('p.myp5').addClass('myclass'); // ngược lại với not
+				$('div.parent').find('p').slice(2, 3).addClass('myclass2'); 
+
+
+
+				$('div.parent').slideToggle(10000,function () { // kéo lên
+					alert("Hiển xong");
+				});
+// 
+// 				$('div.parent').toggle(10000,function () { // kéo lên
+// 					alert("Hiển xong");
+// 				});
+
+				// $('div.parent').slideUp(10000,function () { // kéo lên
+				// 	alert("Hiển xong");
+				// });
+				// $('div.parent').fadeIn(10000,function () {
+				// 	alert("Hiển xong");
+				// });
+			});
+		});
+// thế nào là selector trong jq. 
+	</script>
+	<style type="text/css">
+		.myclass{
+			color: red;
+		}
+		.myclass2{
+			color: blue;
+		}
+		.myclass3{
+			color: blue;
+		}
+		.parent{
+			width: 500px;
+			height: auto;
+			border: 1px solid;
+			padding: 50px;
+		}
+	</style>
+</head>
+<body>
+	<p>
+	jquery là một thư viện của js: với phương châm viết ít làm nhiều.
+	xử lý sự kiện, tạo hiệu ứng, tương tác ajax
+	thao tác dom
+	phải nhúng vào đầu tiên so với các file js</p>
+	<div class="parent">
+		<p>
+			<input type="text"  name="txtinput" value="" placeholder="">
+		</p>
+		<p>
+			<input type="checkbox" checked="checked" name="txtInput2" value="" placeholder="">
+		</p>
+		<p class="myp3">
+		Hôm nay là thứ 7. mọi người hay đi chơi.
+		</p>
+		<p>
+			Hôm nay là thứ CN. mọi người hay đi chơi.
+		</p>
+		<p class="myp5">
+			Hôm nay là thứ 3. mọi người hay đi chơi.
+		</p>
+		<p class="myp6">
+			Hôm nay là thứ 4. mọi người hay đi chơi.
+		</p>
+	</div>
+	<select name="" id="select">
+		<option value=""></option>
+	</select>
+	<input type="button" id="mybtn0" name="" value="Click Me 0!" placeholder=""/>
+	<br>
+	<button type="" id="mybtn"> Click Me!</button>
+	<input type="button" id="mybtn2" name="" value="Click Me 2!" placeholder=""/>
+	<input type="password" id="mybtn3" name="" value="" placeholder=""/>
+
+	<br>
+	<div class="parent2">
+		
+	</div>
+</body>
+</html>

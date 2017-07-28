@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>js ôn tập buổi 2</title>
+	<link rel="stylesheet" href="">
+	<script  type="text/javascript" charset="utf-8" >
+		var array1 = new Array("long",1,2,"hiếu");
+		var array2 = new Array("bình",1,3,4);
+		var array3 = new Array ("php",1,3,70,"codeintel");
+		var con_cat= array1.concat(array2,array3);
+		document.write(con_cat+"<br>");
+
+		var ptdate1=/^[0,1]?\d{1}\/(([0-2]?\d{1})|([3][0,1]{1}))\/(([1]{1}[9]{1}[9]{1}\d{1})|([2-9]{1}\d{3}))$/g;
+		var nmdate1='12/24/1996';
+		var ckdate1=ptdate1.test(nmdate1);
+		console.log(ckdate1+ " date 2 ");
+
+
+		
+		var pattent_date=/^((([0-2]?[1-9]{1})|([3][0,1]{1}))|([1,2]?[0]{1}))\-((([0]?[1-9]{1})|([1][1,2]))|([1][0]{1}))\-(([1][9]\d{2})|([2-9]\d{3}))$/g;
+		var mydate="30-01-1910";
+		var checkdate=pattent_date.test(mydate);
+		console.log(checkdate);
+
+
+		var da1=/^0(?=0)$/g;
+		var myda1="00";
+		var checkda1=da1.test(myda1);
+		console.log(checkda1+ " b ");
+
+		var da=/((0?[13578]|10|12)\/((0[0-9])|([12])([0-9]?)|(3[01]?))\/((\d{4})|(\d{2}))|(0?[2469]|11)\/((0[0-9])|([12])([0-9]?)|(3[0]?))\/((\d{4}|\d{2})))/g;
+		// var myda="01/0/2001"
+		// var checkda=da.test(myda);
+		// console.log(checkda+ " a ");
+
+		
+	</script>
+</head>
+<body>
+<input type="text" id="txt_idname" name="txt_name" value="" placeholder=""  />
+</body>
+</html>

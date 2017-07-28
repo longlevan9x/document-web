@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var number=12;
+		function sub() {//có từ khóa var thì là biến cục bộ
+			var number=13;// nếu trong function mà không khai báo từ khóa var thì biến sẽ là biến toàn cục và ghi đè lên biến khác 
+			document.write(number+"<br>");
+		}
+		sub();
+		//var hieu=sub();
+		//document.write(hieu+"<br>");
+		document.write(number+"<br>");
+
+
+		function sum(a,b) {// thường được dùng để bắt sự kiện với html
+			return(a+b);
+		}
+		var tong=sum(6,5);
+		document.write("Tổng =:"+tong+"<br>");
+
+
+		var gptb2=function(hsa,hsb,hsc){// thường được dùng để lập trình các bài toán
+			return(hsa+hsb+hsc);
+		}
+		var tong2=gptb2(1,2,3);
+		document.write("Tổng =:"+tong2+"<br>");
+		document.write(typeof(gptb2()));
+
+		// mảng
+		var myArray= new Array(1,2,3,4,5,6);
+		document.write("<br>"+typeof(myArray));// đối tượng là mảng và kiểu dữ kiệu là array
+		var myArray2= ["bóng đá","cầu lông","tennis",1,2,3,4];// không yêu cầu phần tử trong mảng phải giống nhau.
+		document.write("<br>"+myArray2[2])// vị trí của mảng bắt đầu từ 0
+		document.write("<br>"+myArray2.length); // số lượng phần tử trong mảng
+		document.write("<br>");
+		for (var i = 0; i < myArray2.length; i++) {
+			document.write(myArray2[i]+"<br/>");
+		}
+
+		myArray2.forEach(function (item,index,array) {//item giá trị trong mảng, index thứ tự giá trị trong mảng: có thể thay tên khác
+			// if (index%2==0) {
+			// 	document.write()
+			// }
+			//trong hướng đối tượng được gọi là phương thức và thuộc tính (biến và hàm)
+			document.write(" gia tri: "+item+" -vị trí: "+index);// array có thể có thể không
+		});
+		document.write("<br />");
+
+
+		//phương thức
+
+
+		var myArray3=new Array(1,2,3,4,5,6,7,8,9,10);
+		// myArray3.push(9, 10, 11);// thêm vào cuối
+		// myArray3.forEach(function (item,index,array) {
+		// 	document.write("push gia tri: "+item+" -vị trí: "+index);
+		// });
+
+		// document.write("<br />");
+
+		// var xoa=myArray3.pop();//xóa ở cuối
+		// myArray3.forEach(function (item,index,array) {
+		// 	document.write("push gia tri: "+item+" -vị trí: "+index);
+		// });
+		// document.write("<br />");
+		// document.write(xoa);
+		// document.write("<br />");
+		// var a=myArray3;
+		// document.write(a);
+		document.write("<br />");
+		//shift: ngược với pop, unshift ngược lại với  push
+		//indexof : tìm xem giá trị có tồn tại trong mảng hay không
+		var check = myArray3.indexOf(6,2);// tham số thứ nhất. là giá trị cân tìm, tham số thứ 2 là vị trí bắt đầu duyệt tìm phần tử
+		document.write(check);// tìm đến vị trí cuối mảng
+		document.write("<br />");
+		var checkLast=myArray3.lastIndexOf(6,7);
+		document.write(checkLast);
+		document.write("<br/>");
+		var _slice=myArray3.slice(4,7);	
+		document.write(_slice);
+		document.write("<br/>");
+		var _splice=myArray3.splice(5,0,100,200,300);//bắt đầu từ vị trí thứ 5 xóa 0 phần tử và thêm 100 200
+		document.write(myArray3);
+		document.write("<br/>");
+
+		//sai - đã sửa
+		var myarr3=new Array(5,6,8,7,"long");
+		var _concat=myArray3.concat(myarr3);
+		document.write(_concat);
+		document.write("<br/>");
+
+		var stringarr=myArray3.join(" %");
+		document.write(stringarr);
+		document.write("<br/>");
+
+		var _tostring=myArray3.toString();
+		document.write(typeof(_tostring));
+		document.write("<br/>");
+		
+		var _value=myArray3.valueOf();
+		document.write(typeof(_value));
+		document.write(_value);
+		document.write("<br/>");
+		// sai -đã sửa
+		var myArray4=new Array();// khai báo mảng mới không cần có giá trị
+		myArray4=Array.of(1,35);// tọa biến trong mangr
+		var t=myArray4[0]; //ít sử dụng
+		//	var myArrray4=myArray4.of("Lê","Văn");
+		document.write(typeof(myArray4));
+		document.write("<br/>");
+		document.write(t);
+
+		//sắp xếp
+		document.write("<br/>");
+		var myArraysort1=new Array(9,72,5,6,3,2,0);//"a","h","c","e","g" chỉ chuyển theo kiểu chuỗi
+		var arsort1=myArraysort1.sort(function (a,b) {// để sắp xếp cả số thì truyền vào tham số tham số nào truyền trước mang đi trừ thì là sắp xếp giảm. truyền sau mang đi trừ thì là sắp xếp tăng dần
+			return b-a;
+		});
+		document.write(arsort1);
+
+
+			document.write("<br/>");
+		//chuỗi
+		var mystring="Hôm nay trời sắp mưa";
+		document.write(mystring.link());
+		var r=mystring.lastIndexOf("sắp",17);
+		document.write(r);
+		//xem thêm
+		document.write("<br/>");
+		var mystring="Hôm nay trời sắp mưa";
+		var v=mystring.split(",",1);
+		document.write(v);
+		document.write("<br>");	
+		// xử lý  với các thẻ html
+		document.write(mystring.big()+"<br/>");
+		document.write(mystring.fontcolor(Color="red")+"<br/>");
+		document.write(mystring.fontsize(Size=20)+"<br/>");
+		document.write(mystring.link(Url="http://www.google.com")+"<br/>");
+		document.write("a"+mystring.sub()+"<br/>");
+
+		var mystring2="Tôi là lê văn long"
+		var con=mystring.concat(mystring2);
+		document.write(con+"<br>");
+		var date1=new Date(1007,10,12);
+		document.write(date1+"<br>");
+		document.write("<br>");
+		// biểu thức chính quy
+		var regexp1 =/Long/ ;
+		if (regexp1.test(" I'm Lê Văn Long")) {
+			document.write("có chữ long");
+		}
+		else{
+			document.write("không có chữ long");
+		}
+
+
+
+		document.write("<br>");
+	</script>
+</head>	
+
+
+<body>
+	<p>src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"</p>
+	<p>dom tác dộng đến html
+	bom tác động đến trình duyệt</p>
+</body>
+</html>

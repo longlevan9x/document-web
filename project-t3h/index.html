@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="name" content="content">
+	<meta name="name" content="content">
+	<meta name="name" content="content">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style type="text/css" media="screen">
+		/*
+		*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
+		*/
+		html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+		body{line-height:1}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+		input,select{vertical-align:middle}
+		/* End Reset */
+		div.content{
+			width: 700px;
+			height: 700px;
+			margin: 0 auto ;
+		}
+		div.big{
+			width: 500px;
+			height: 500px;
+			border: 3px solid green;
+			position: relative;
+			float: left;
+		}
+		div.small{
+			width: 50px;
+			height: 50px;
+			background-color: greenyellow;
+			border: 3px solid blue;
+			margin: 1px;
+			position: absolute;
+			opacity: 0.5;
+		}
+		button.go{
+			margin: 20px 0;
+			width: 123px;
+			height: 50px;
+			border-radius: 4px;
+			background-color: #EADFDF;
+			font-family: "tahoma";
+			font-size: 12px;
+			font-weight: 600;
+			opacity: 0.4;
+		}
+		.stop{
+			padding: 15px 30px;
+			border-radius: 4px;
+			background-color: #F6D5D5;
+			font-family: "tahoma";
+			font-size: 14px;
+			font-weight: 600;
+			opacity: 0.4;
+		}
+	</style>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div class="main">
+		<header id="header"></header>
+		<!-- End Header -->
+		<section id="section">
+			<div class="content">
+				<button type="button" id="btn_lb" class="go" onclick="moveBottomleft(); ">Go Left-bottom</button>
+				<button type="button" id="btn_rt" class="go" onclick="moveRighttop();">Go Right-top</button>
+				<button type="button" id="btn_rb" class="go" onclick="moveBottomright();">Go Right-bottom</button>
+				<button type="button" id="btn_cc" class="go" >Go Center-center</button>
+				<div class="big" id="box_big">
+					<div class="small" id="box_small"></div>
+				</div>
+				<button type="" class="stop" id="stop_move" >Stop</button>
+				<button type="" class="stop" id="restart">Restart</button>
+			</div>
+		</section>
+		<!-- End Section -->
+		<footer id="footer"></footer>
+		<!-- End Footer -->
+	</div>
+	<script  type="text/javascript" charset="utf-8" async defer>
+		var box_animation = document.getElementById("box_small");
+		var position=0;
+		var move;
+		//bottom left
+		function moveBottomleft() {
+			move=setInterval(Box,20);
+			function Box() {
+				if (position === 440) {
+					clearInterval(move);
+				}else{
+					position++;
+					box_animation.style.top=position+"px";
+				}
+			}
+		}
+		// Right top
+		function moveRighttop() {
+			move=setInterval(Box,20);
+			function Box() {
+				if (position <= 440) {
+					position=position+5;
+					box_animation.style.left=position+"px";
+				}else if(position>440){
+					box_animation.style.left="0px";
+				}
+			}
+		}
+		//right bottom
+		function moveBottomright() {
+			move=setInterval(Box,20);
+			function Box() {
+				position = position + 5;
+				box_animation.style.top=position+"px";
+				box_animation.style.left=position+"px";
+				if (position == 440) {
+					clearInterval(move);
+					box_animation.style.left="0px";
+					box_animation.style.left="0px";
+
+				}
+			}
+		}
+		// Center center
+		var moveCc=document.getElementById("btn_cc");
+		moveCc.addEventListener('click',function () {
+			move=setInterval(Box,20);
+			function Box() {
+				if (position === 220) {
+					clearInterval(move);
+					box_animation.style.display="block";
+				}else{
+					position++;
+					box_animation.style.left=position+"px";
+					box_animation.style.top=position+"px";
+					box_animation.style.display="none";
+				}
+			}
+		});
+		var stopMove = document.getElementById("stop_move");
+		stopMove.onclick = function () {
+			clearInterval(move);
+		}
+		var reStart = document.getElementById("restart");
+		reStart.onclick = function () {
+			clearInterval(move);
+			box_animation.style.left="0px";
+			box_animation.style.top="0px";
+		}
+		function reFresh() {
+			window.open(location.reload(true));
+		}
+		setInterval(reFresh,13000);
+		
+	</script>
+</body>
+</html>

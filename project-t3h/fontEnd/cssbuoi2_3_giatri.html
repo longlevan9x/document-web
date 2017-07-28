@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		*{
+			margin: 0 ;
+			padding: 0;
+		}
+		div[class="code"]{
+			width: 960px;
+			background-color: lightgrey;
+			margin: 0 0 100px 0;
+		}
+		p#p1{
+			font-family: tahoma;
+			font-style: italic;
+			font-variant:small-caps; /*chữ hoa cỡ nhỏ*/
+			font-weight: bold;
+			font-size: small; /* medium cỡ chữ bình thường, small cỡ chữ nhở*/
+			/* đây là những thuộc tính cơ bản hay sử dụng */
+		}
+		p.php1608E{
+			color: red;
+			direction:ltr;
+			letter-spacing: 20px;
+			word-spacing: 30px;
+			text-indent: 50px;
+			text-align: justify; /*căn lề hai bên*/
+			text-decoration: line-through;
+			
+		}
+		p.php1608E::first-letter{ /*tác động đến chữ cái đầu tiên*/
+			color: blue;
+			text-transform: capitalize; /*quy đinh kiểu viết hoa hay viết thường*/
+		}
+		p.me{
+			width: 50px;
+			white-space: pre; /*viết theo kiêủ thẻ pre, viết sao hiển thị vậy, nowrap hiển thị trên 1 dòng*/
+		}
+		p.text-shadowvidu{
+			font-size: 30px;
+			text-shadow: blue 0px -1px 9px ;
+			font-style: italic;
+		}
+		div.background{
+			margin: 30px;
+			width: 500px; height: 500px;
+			background-color: #8D1313;
+			background-image:url("img/3-1.jpg") ;
+			background-size: 100px;
+			background-repeat: no-repeat; /* repeat-x, repeat-y*,no-repeat*/
+			background-position: 40px 50px;
+			background-attachment: scroll; 	/*scroll cố định, fixed di chuyển theo thanh cuộn*/
+		}
+		div.border{
+			width: 500px;
+			height: 400px;
+			background-color: #FFF;
+			border: 5px solid yellow;
+			border-bottom-color: red;
+			border-top-color: #2FD92F;
+			border-left-color: #3538C7;
+			margin:  0 0 50px 50px;/*có giá trị âm*/	
+			padding: 30px 0 0 0;
+		}
+		div.padding{ /* không có giá trị âm*/
+			width: 400px;
+			height: 200px;
+			background-color: #4E11D9;
+			padding: 0 0 0 30px;
+		}
+		div.padding p.paddingcon{
+			color: #FFF;
+			display: none;
+		}
+		 ul.display li {
+			/* display: inline-block; */
+			list-style: "square";
+		}
+		.ul2 li{
+			display: inline;
+		}
+		.ul2 li a{
+			color: white;
+			text-decoration: none;
+		}
+		div.inline{
+			margin:30px 0 0 0 ;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<!-- đơn vị đo lường trong css -->
+	<ol type="1" style="margin: 55px"> 
+		 in cm mm ex pt pc  
+	    <li>%</li>
+	    <li>em : 1em theo kích thước font</li>
+	    <li>px:1px =1điểm ảnh theo điểm ảnh</li>
+	    <li></li>
+	</ol>
+	đơn vị màu sắc
+	<ol type="1" style="margin: 55px">
+	    <li>color name</li>
+	    <li>rgb(x,x,x)</li>
+	    <li>rgb(x%,x%,x%) theo phần trăm /255</li>
+	    <li>#rrggbb</li>
+	</ol>
+	kế thừa trong css
+	<ol type="1" style="margin: 55px">
+	các thuộc tính hay được kế thừa: font ,văn bản 	<br>
+	ghi đề: (over-ride) thuộc tính từ phần tử cha <br>	
+	   	
+	</ol>
+	<ol type="A" style="margin: 55px">
+	thuộc tính định dạng font chữ
+	    <ol>
+	    	<li>font chữ có chân: time new roman , vni-cooper</li>
+	  		<li>font chữ không có chân: arial, vni-franko</li>
+	    </ol>
+	    thuộc tính và giá trị: font family,weight,
+	    <li>direction: hướng văn bản:ltr</li>
+	    <li>letter-spacing: thêm bớt khoảng trắng giữa các chữ: normal or số</li>
+	    <li>word-spacing: tăng giảm khoảng trắng giữa các ký tự:normal or số</li>
+	    <li>text-indent: tạo độ thụt của văn vản: % or 1 số cụ thể</li>
+	    <li>white-space:đinh dạng và điều khiển phần khoảng trắng văn bản : normal, pre, nowrap</li>
+	    <li>text-shadow:[màu][tọa độ x y] [độ mờ]:tạo độ bóng cho văn bản</li>
+	</ol>
+	<ol type="i" style="margin: 55px">
+		các giá trị dạng nền
+	    <li>background-color:màu nền</li>
+	    <li>background-image: ảnh nền/li>
+	    <li>background-repeat: quy định sự lặp đi lặp lại của hình ảnh: repeat, repeat-x,repeat-y, no-repeat</li>
+	    <li>background-position: điều khiển vị trí ảnh nền trên trình duyệt: top, center, left, right, bottom, x-%,y-% , x-pos,y-pos (px)</li>
+	    <li>background-attachment: xác định xem ảnh nền cố định hay trôi theo: scroll, fixed</li>
+	    <li></li>
+	</ol >
+	<ol type="a" style="margin: 55px">
+	đường viển trong css: giúp xác định style , độ rộng và màu sắc của đường viển bao quanh
+	    <li>border-bottom-color: màu viển dưới cùng</li>
+	    <li>border-top-color</li>
+	    <li>border-left-color</li>
+	    <li>border-right-color</li>
+	    <li>border-width: thin medium,thick</li>
+	    <li>
+	    	<ol type="1" style="margin: 55px"> 
+		        <li>margin:vùng lề</li>
+		        <li>padding:vùng đệm</li>
+		        <li>content</li>
+		        <li>border</li>
+		        <li>edge: bờ cạnh</li>
+	    	</ol>
+	    </li>
+	</ol>
+	<ol type="I" style="margin: 55px">
+	căn lề trong css: margin: tình từ đường viền ra ngoài <br> padding:tính từ đường viền vào trong,cho phép xác định không gian giữa nội dung hiển thị với đường viền.
+	    <li>margin-top: căn lề trên đầu; auto,%,length</li>
+	    <li>margin-bottom</li>
+	    <li>margin-left</li>
+	    <li>margin-right</li>
+	</ol>
+	<ol type="A" style="margin: 55px">
+	display:quy định kiểu hiển thị trong trang web <br>
+	    <li>block: nằm 1 hàng riêng biệt(li,div,h) <br></li>
+	    <li>inline:phần tử hiển thị trên cùng 1 dòng: (strong, span)</li>
+	    <li>giá trị: 
+		    <ul>
+		        <li>none ---- không hiển thị gì hết, visible:hidden--- không hiển thị nội dung, vẫn còn vị trí</li>
+		        <li>inline:Xếp thành 1 hàng</li>
+		        <li>block: mỗi hàng riêng biệt</li>
+		        <li>inline-block: kết hợp giữa inline và block, chuyển lên cùng 1 hàng nhưng vẫn có thể tùy chỉnh</li>
+		        <li>list-item: định dạng kiểu danh sách có thứ tự như là "ol"</li>
+		        <li>list-style: chỉ dùng cho ul</li>
+		    </ul>
+	    </li>
+	</ol>
+	<ol type="a" style="margin: 55px">
+	postion : giúp di chuyển phần tử mà không gây ảnh hưởng đến phần tử khác
+	    <li>relative:định vị vị trí tuyệt đối
+			<ul>
+			    <li>Khi khai bào <b>top</b> thì thôi <b>bottom</b> và ngược lại</li>
+			    <li>khi khai báo <b>left</b> thì thôi <b>right</b> và ngược lại</li>
+			</ul>
+	    </li>
+	    <li>absolute: định vị tương đối<br>thiết lập 1 phần tử luôn nằm trong phần tử cha khai báo relative relative > absolute</li>
+	    <li>fixed: hiển thị luôn luôn đi theo trình duyệt</li>
+	    <li>static</li>
+	</ol>
+	<ol type="A" style="margin: 55px">
+	    <li><strong>float</strong>: cố định thành phần web về phía trái hay phải(sử dụng trong việc dàn trang,chia cột)-left right none</li>
+	    <li><strong>clear</strong>: sử dụng đi cùng float. định dạng cách tràn cho thành phần trước nó đặt float---- right left both</li>
+	</ol>
+	<ol type="1" style="margin: 55px">
+	overflow: 
+	    <li>visible:</li>
+	    <li>hidden</li>
+	    <li></li>
+	    <li></li>
+	</ol>
+	<div class="code">
+		Đây là phần code
+		<p id="p1">xin chào các bạn, mình đang học ở trung tâm t3h</p>
+		<p class="php1608E">lớp php 1608E</p> 
+		<p class="me">I'm Lê Văn Long , 
+		tôi đến từ hà tây, 
+		tôi 20 tuổi</p> 
+		<p class="text-shadowvidu">Đây là ví dụ về text-shadow</p>
+		<div class="background">
+			background
+		</div>
+		<div class="border">
+			Tôi là long	
+		</div>
+		<div class="padding">
+			<p class="paddingcon">học css về padding</p>
+			<ul class="display">
+				<li>100</li>
+				<li>200</li>
+				<li>3538C7</li>
+			    <ul class="ul2"> 
+			        <li><a href="#">3</a></li>
+			        <li><a href="#">400</a></li>
+			        <li><a href="#">500</a></li>
+			        <li><a href="#">6</a></li>
+			    </ul>
+			</ul>
+		</div>
+		<div class="inline" style="background-color:gray;width:100px;height:50px;">
+			    	
+	    </div>
+	    <div class="inline1" style="background-color:black;width:100px;height:50px;">
+	    	
+	    </div>
+	</div>
+	
+</body>
+</html>

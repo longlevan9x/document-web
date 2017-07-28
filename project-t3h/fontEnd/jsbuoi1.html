@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Javascript</title>
+	<link rel="stylesheet" href="">
+	<script  type="text/javascript" charset="utf-8" >
+		// document.write("Hello World!");
+		// document.write("</br>");
+		// document.write("<h1>Đây là lớp PHP1068E</h1>"); // câu lệnh document.write là để in ra mà hình
+		// var myName="Le van Long";
+		// alert(myName);
+		// var Myname='Hello I\'m Long';
+		// console.log(Myname);
+		// var hoten=prompt("Vui lòng nhập họ tên");
+		// document.write(hoten);
+		var myString = "Đây là 1 chuỗi";
+		var myNumber=1;
+		var myBoolean=true;
+		var a=12,b='4';
+		var tong=a+b;// sử dụng toán tử cộng để nối chuỗi
+		document.write(typeof(myString)+ "<br/>");
+		document.write(typeof(myNumber)+ "<br/>");
+		document.write(typeof(myBoolean)+ "<br/>");
+		console.log(tong);
+		c="12";
+		c=Number.parseInt(c);
+		// parseFloat là ép trả về phần số thực
+		//parseInt ép trả về phần số nguyên
+		//Number ép trả về số nói chung
+		document.write(typeof(c));
+
+		// Hàm kiểm tra số : number.isinteger
+		// hàm kiểm tra ko là số : number.isNaN
+
+		// các toán tử
+		var d=10;
+		var e=d++;// tăng sau
+		var f=++d; //Tăng trước rồi đến d
+		document.write(e);
+		document.write(f+"</br>");
+		var mybien=1;//0;
+		var mybien2="1";
+		if (mybien!==mybien2) {// khi khai báo biến bằng 0 thì giá trị trả về luôn luôn là Yes. sử  === để thoát khỏi kiếu so 
+			//sánh này
+			//=== là so sánh tuyệt đối
+			// ? là toans tử điều kiện trả về biến mệnh đề a khi biểu thức so sánh đúng . b khi biểu thức sai
+			document.write("yes");
+		}
+		else{
+			document.write("No")
+		}
+		for (var i=0; i < 10; i+=2) {
+			document.write(i+"<br>")
+		}
+		(mybien!==mybien2) ? document.write("yes") : document.write("No");
+	</script>
+	<noscript>Không hỗ trợ</noscript>
+</head>
+<body>
+	
+</body>
+</html>

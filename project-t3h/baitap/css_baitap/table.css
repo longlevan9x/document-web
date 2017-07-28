@@ -1,0 +1,57 @@
+table{
+	font-family: Calibri;
+	font-size: 16px;
+	width: 534px;
+}
+td{
+	border:1px solid #9fcc74;
+	text-align: center; 
+	height:50px;
+}
+.league{
+	text-align: center;
+	border: 1px solid #9fcc74;
+	background-color: #E1F8CB;
+	height: 30px;}
+#table_top{
+	height: 35px; 
+}
+#table_top1{
+	height: 60px;
+}
+#table_top,#table_top1{
+	background-color: #75B43A;  
+	color: white;
+	font-weight: bold;
+}
+.nameclub,.kind{
+	font-size: 15px;
+	/* font-family: Calibri; */ 
+	font-weight: bolder; 
+	width: 95px;
+}
+.kind{
+	width: 60px;}
+.live,.result{
+	color:red; 
+	font-weight: bold;
+	font-size: 17px;
+}
+.result{
+	width: 65px; 
+	font-size: 15px;
+}
+#ketqua1,#ketqua2{
+	text-decoration: underline;
+}
+.icon_kq{
+	height: 6px;
+}
+.logo_club{
+	width: 35px;height: 35px;
+}
+.day{
+	background-image: url('../img_baitapb2/flag_background_time.gif');
+	background-repeat: no-repeat;
+	background-position: right top;
+}

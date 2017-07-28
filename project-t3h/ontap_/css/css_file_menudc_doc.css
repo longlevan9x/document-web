@@ -1,0 +1,73 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#mainnav{
+  padding:10px;
+  margin:10px;
+}
+#mainnav ul{
+  background-color:red;
+  list-style:none;
+  padding:0;
+  width:200px;
+}
+#mainnav ul li{
+  position:relative;
+  width:200px;
+  height:40px;
+  border-bottom: 1px solid #fff;
+}
+#mainnav ul .thefirst{
+  background: #1D1F20;
+}
+#mainnav ul li a{
+  text-decoration:none;
+  color:#fff;
+  padding:0 16px;
+  display:block;
+}
+#mainnav li:hover{
+  background-color:green;
+}
+/* bắt đầu tạo dropdown cap 1 */
+#mainnav .sub-menu{
+  position:absolute;
+  display:none;
+  top:0;
+  left:200px;
+  width:200px;
+}
+#mainnav li:hover .sub-menu{
+  display:block;
+  background-color:blue;
+}
+/* hết dropdown cap 1 */
+/* bắt đầu tạo dropdown cap 2 */
+#mainnav .sub-menu2{
+  position:absolute;
+  display:none;
+  top:0;
+  left:200px;
+  width:200px;
+}
+#mainnav ul li li:hover .sub-menu2{
+  display:block;
+  background-color:pink;
+  color:black;
+}
+
+/* hết dropdown cap 2 */
+/* bắt đầu tạo dropdown cap 3 */
+#mainnav  .sub-menu3{
+  position:absolute;
+  display:none;
+  top:0;
+  left:200px;
+  width:200px;
+}
+#mainnav .sub-menu2 li:hover .sub-menu3{
+  display:block;
+  background-color:black;
+  color:blue;
+}

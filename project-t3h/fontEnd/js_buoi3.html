@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>javascript buoi 3</title>
+	<link rel="stylesheet" href="">
+	<script  type="text/javascript" charset="utf-8" >
+		var myNumber = 12;
+		var test1 = myNumber.toString();//chuyển sang kiểu chuỗi
+		console.log(typeof(test1));
+
+		var check=eval(test1); // chuyển sang kiểu số
+		console.log(check);
+
+		// biểu thức chính quy
+		var pattent=/hom nay/g; // xem tất cả các giá trị bên trong
+		var string1="hom nay"
+		var check1=pattent.test(string1);
+		document.write(check1);
+		// ^ là bắt đầu kiểm tra cần so sánh với biểu thức chính quy.  
+		// $ là ngược lại với ^
+		// * giống với selector attritbue , xuất hiện không hoặc nhiều lần
+		// . chấp nhận tất cả các kí tự chỉ cần không có khoảng trắng
+		// + là xuất hiện ít nhất là một  lần 
+		// \d tương đương với [0-9]
+		// \  <=> -
+		// x|y hoặc là x hoặc là y
+		// dấu ? <=> với {0,1} cho phép lấy trước nó không hoặc 1 giá trị
+		document.write("<br>");
+		var pattent_re= /^[0-9]+$/g; // [] phạm vi kích thước của chuỗi.
+		// {2} chỉ được chọn 2 giá trị, giới hạn của chuỗi
+		var myNumber_re="99";// không quan tâm đến kiểu dữ liệu, chỉ so sánh giá trị
+		var check_re=pattent_re.test(myNumber_re);
+		document.write(check_re);
+		//làm thế nào để kiểm tra 1 số điện thoại 10 số của viettel
+		var pt=/^[0][9][6,7,8]\d{7}$/g; //\d <=> [0-9]
+		var nm='0969651118';
+		var ck=pt.test(nm);
+		console.log(ck);
+
+		// nhập vào 5 chữ số và không bắt đầu = 0, kết thúc =  số chẵn
+		var ptre=/^[1-9]\d{3}[0,2,4,6,8]$/g;
+		var mynb="40324";
+		var check2=ptre.test(mynb);
+		console.log(check2);
+		// số điện thoai 11 số
+		var pt1=/^([0][9][6,7,8]\d{7})$|([0][1][6][3,4,5,6,7,8,9]\d{7})$/g; //\d <=> [0-9]
+		var nm1='01614444444';
+		var ck1=pt1.test(nm1);
+		console.log(ck1+ " 11 số vt");
+
+		//mã vùng +84 viettel
+		var pt1=/^([-+][8][4][9][6,7,8]\d{7})$|([-+][8][4][1][6][3,4,5,6,7,8,9]\d{7})$/g; //\d <=> [0-9]
+		var nm1='+841665555555';
+		var ck1=pt1.test(nm1);
+		console.log(ck1+ " + 84 số vt");
+		//mã vùng +84 
+		var pt1=/^([-+][8][4][9][6,7,8]\d{7})$|([-+][8][4][1][6][2,3,4,5,6,7,8,9]\d{7})$/g; //\d <=> [0-9]
+		var nm1='+8416511111111';
+		var ck1=pt1.test(nm1);
+		console.log(ck1+ " + 84 số ");
+		// kiểm tra số điện thoại.
+		var ptdate=/^[0-9]{1,2}\-\d{1,2}\-\d{4}$/g; //\d <=> [0-9]
+		var nmdate='24-12-1996';
+		var ckdate=ptdate.test(nmdate);
+		console.log(ckdate+ " date ");
+
+		
+
+		// ngày tháng trong javascript
+
+		var mydate= new Date();
+		console.log(mydate);
+		// cách 2 ít dùng
+		var mydate2= new  Date(2106,01,13);
+		console.log(mydate2);
+
+		var myDate3=new Date();
+		var g_date= myDate3.getDate();
+		console.log(g_date);	
+
+		var mymonth=new Date();
+		var g_month= mymonth.getMonth();
+		console.log(g_month+"a");	
+
+		var my_set_date= new Date();
+		 my_set_date.setDate(12);
+		console.log(my_set_date+ " b");
+
+		// toán học trong js
+
+		// sự kiện trong javascript
+		// là hành động được phát hiện trong js, xử lý theo ý đồ của người lập trình
+		// viết thông qua các thuộc tính hỗ trợ có sẵn trong html (function js)
+		// 2 cách viết khác thông qua DOM event và DOM listener
+		// 1 số sự kiện
+		// onkeydown xảy ra khi nhấn ,onkeypress  xảy ra khi nhấn giữ,onkeyup xảy ra khi nhả phím
+
+		function clickme() {
+			alert("Hello You!");
+		}
+
+		function clickyou() {
+			alert("Hello Me!");
+		}	
+
+		function myblur(){
+			document.write("Hello world");
+		}
+		function dbmyclick() {
+			alert("Ondblclick");
+		}
+		function myonkeydown() {
+			alert("onkeydown");
+		}
+		function myonkeypres() {
+			alert("onkeypress");
+		}
+		function myonkeyup() {
+			alert('onkeyup');
+		}
+		function myonload() {
+			alert("Hello onload");
+		}
+		function myonmousedown() {
+			alert("myonmousedown");
+		}
+		function myonmousemove() {
+			alert("onmousemove");
+		}
+		function myonunload() {
+			alert("onunload");
+		}
+
+
+        function goodBye()
+        {
+            alert("Goodbye");
+        }
+		// DOM element,html(trong javascript chỉ chấp nhận id),css,event,listener (jquery chấp nhận tất cả css)
+ 	</script>
+</head>
+<body onbeforeunload="goodBye();"> <!--onload="myonload();" -->
+	<p>regexlib.com</p>
+	<br>
+	click
+	<button type="button" onclick="clickme();clickyou();">Click Me!</button>
+	<br/>
+	dbclick
+	<button type="button" ondblclick="dbmyclick();">Click Me! ondblclick</button>
+	<br/>
+	blur
+	<input type="text" onblur="myblur();"/>	
+	<br/>
+	keydown
+	<input type="text" onkeydown="myonkeydown();" name="" value="" placeholder="">
+	<br/>
+	keypress
+	<input type="text" onkeypress="myonkeypres();" name="" value="" placeholder="">
+	<br/>
+	keyup
+	<input type="text" onkeyup="myonkeyup();" name="" value="" placeholder="">
+	<br>
+	onload trong thẻ body
+	<br>
+	<img src="img/border-img.png" onmousedown="myonmousedown();" onmousemove="myonmousemove();" alt="">
+	<p></p>
+</body>
+</html>

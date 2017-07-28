@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+ <!-- thông báo cho td day là tập tin HTML -->
+<html lang="vi">
+	<!-- thông báo bắt đầu code văn bản hmlt -->
+	<head>
+		<meta charset="utf-8">
+		<!-- đây là phần đầu trang web, chứa cá thông tin quan trọng -->
+		<meta name="author" content="Nguễn Văn Linh" /> 
+		<!-- giúp sale tốt hơn, quảng cáo tốt hơn -->
+		<meta name="description" content="Bán Quần áo" /> 
+		<!-- miêu tả ngắn gọn nội dung web, sale, quảng cáo -->
+		<meta name="keyword" content="quần jeans, áo thun, áo sơ mi" />
+		<title>Sale.com</title>
+		<link rel="icon" type="image/jpg" href="img/ao.jpg">
+		<link rel="stylesheet" type="text/css" href="css/style.css"> <!-- css ngoại tuyến -->
+		<style type="text/css">
+		</style> <!-- css nội tuyến -->
+		<!-- <script src="jc/myjs.js" type="text/javascript"></script> link đến file js -->
+		<script type="text/javascript">
+			// code JS
+		</script>
+		<noscript>trình duyệt không hỗ trợ, vui lòng bật js lên</noscript>
+	</head>
+	<body>
+		<!-- học về các thẻ tiêu đề -->
+		<h1 id="my_h1">Đây là thẻ h1</h1>
+		<br/>
+		<h2>Đây là thẻ h2</h2>
+		<h6>Đây là thẻ h6</h6>
+		<!-- hết thẻ tiêu đề -->
+		<p>
+			<i>Đây là chữ nghiêng</i>
+		</p>
+		<p>
+			<u>Đây là chữ gạch chân</u>
+		</p>
+		<p>
+			<strong>Đây là chữ in đậm</strong>
+		</p> 
+		<p>
+			<b>Đây là chữ in đậm</b>
+		</p> <!-- ít khi dùng -->
+		<!-- mang tính nhấn mạnh, sale web hơn thẻ <b></b> -->
+		<p>
+			<mark>Bôi sáng</mark>
+		</p>
+		<p>
+			<em>Đây là thẻ em</em>
+		</p>
+		<p>
+			<del>Đây là thẻ del</del>
+			<strike>Đây là thẻ strike</strike>
+		</p>
+		<p>
+			<span>Tôi là Linh</span>
+			<span>Tôi là A</span>
+			<span>Tôi là B</span>
+			<!-- gom góm inline -->
+		</p>
+		<p>H<sub>2</sub>O</p>
+		<p>X<sup>2</sup>Y</p>
+		<blockquote cite="http/example.com/facts">
+			<p> Trích dấn: ...</p>
+		</blockquote>
+		<p>
+			<code>Định dạng văn bản theo kiểu viết code</code>
+		</p>
+		<p>
+			<small>Đây là tôi</small>
+		</p>
+		<p>
+			<big>Đây cũng là tôi</big>
+		</p>
+		<!-- tạm thời dừng các thẻ định dạng văn bản -->
+		<!-- học về thẻ liên kết -->
+		<a href="#my_h1" title="lipsum" name="Linh" id="my_id" target="_self" class="my_class">VNExpress</a>
+		<!-- thuộc tính target: blank, self -->
+		<!-- #my_h1 liên kết anchor link hoặc là NEO -->
+		<img src="../img/ao.jpg" alt="Đây là ảnh của tôi" title="Ảnh tôi đây"/>
+		<!-- hỗ trợ mạnh cho việc sale web -->
+		<a href=""><img src="" alt="" /></a>
+		<!-- hét về thẻ liên kết -->
+
+		<!-- tạo ra danh sách -->
+		<ol>
+			<li><a href="#">AAAAA</a></li>
+			<li>
+				<a href="#">BBBBB</a>
+				<ul>
+					<li>111</li>
+					<li>222</li>
+					<li>333</li>
+				</ul>
+			</li>
+			<li><a href="#">CCCCC</a></li>
+			<li><a href="#">DDDDD</a></li>
+		</ol>
+		<!-- thẻ video -->
+		<video width="300" height="400" src="video/mov_bbb.mp4" loop controls poster="images/300x250.png">
+		</video>
+		<br>
+		<audio src="audio/horse.ogg" controls loop></audio>
+		<br>
+		<object data="video/mov_bbb.mp4" width="300" height="400"></object>
+		<br>
+		<object data="audio/horse.ogg" controls width="300" height="400"></object>
+		<!-- Mục đích: hỗ trợ tối đa các văn bản media trên website, thường xuyên dùng object vì hỗ trợ đa trình duyệt-->
+		<br>
+		<object data="http://www.24h.com.vn/tin-tuc-trong-ngay-c46.html" width="300" height="400"></object>
+		<embed src="images/bookmark.swf" width="300" height="400" type=""/>
+		<!-- hết thẻ html media -->
+
+		<!-- thẻ html plugin -->
+		<iframe src="https://www.youtube.com/embed/FrkymwL0woM?autoplay=1&playlist=FrkymwL0woM&loop=0&controls=1" autuplay width="300" height="400""></iframe>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/FrkymwL0woM" frameborder="0" allowfullscreen></iframe>
+		
+		<br>
+		<br>
+		<br>
+		<!-- thẻ table hiển thì giữ lời theo kiểu bảng biểu-->
+		<table border="1" width="100%" cellpadding="0" cellspacing="0">
+			<caption>Đây là bảng của tôi</caption>
+			<thead> <!-- thẻ tiêu đề -->
+				<tr>
+					<th>STT</th>
+					<th>Quê quán</th>
+					<th>SĐT</th>
+					<th>Email</th>
+					<th>FA</th>
+				</tr>
+			</thead>
+			<tbody> <!-- nội dung chính của bảng -->
+				<tr>
+					<td colspan="2">1</td>
+					<td>Ninh Bình</td>
+					<td>0964 014 282</td>
+					<td rowspan="2">linhquang923@gmail.com</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Ninh Bình</td>
+					<td>0964 014 282</td>
+					<td>linhquang923@gmail.com</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table border="1" width="500" cellpadding="0" cellspacing="0">
+			<caption>Thời khóa biểu</caption>
+			<thead> <!-- thẻ tiêu đề -->
+				<tr>
+					<th rowspan="2"></th>
+					<th colspan="2">T2</th>
+					<th colspan="2">T3</th>
+					<th colspan="2">T4</th>
+				</tr>
+			 <!-- nội dung chính của bảng -->
+				<tr>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>MH</td>
+					<td>HTML</td>
+					<td>CSS</td>
+					<td colspan="2">JS</td>
+					<td colspan="2">PHP</td>
+				</tr>
+				<tr>
+					<td>A</td>
+					<td colspan="2">B</td>
+					<td>C</td>
+					<td>D</td>
+					<td>E</td>
+					<td>F</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<br>
+		<br>
+
+		<!-- thẻ canvas để vẽ đồ họa -->
+		<canvas id="mycanvas" style="width:300px; height:250px; border: 1px solid black;"></canvas> <!-- style viết đoạn css cục bộ -->
+		<script type="text/javascript" charset="utf-8">
+			var canvas = document.getElementById("mycanvas");
+			var ctx = canvas.getContext("2d"); //để vẻ đồ họa 2d
+			// beginPath(); // bắt đầu nếu muốn vẽ hình mới
+			ctx.fillStyle ="black";
+			ctx.fillRect(0,0,300,250);
+			ctx.moveTo(0,0);
+			ctx.lineTo(300,175);
+			ctx.strokeStyle = "deepskyblue";
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(150,50,20,0,2*Math.PI);
+			// tọa độ x,y radius, góc vòng cung bắt đầu, kết thúc
+			ctx.stroke();
+		</script>
+
+	</body>
+</html>
+
+nguyenthanhtrieu8X@gmail.com
+
+[LPHP1608E]_nguyen_van_linh_BT_HTML
+Dear, 
+nội dung
+Thanks
+chữ ký

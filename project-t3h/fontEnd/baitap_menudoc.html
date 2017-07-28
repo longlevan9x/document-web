@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Văn Long"/>
+	<meta name="keyword" content="bài tập css, html"/>
+	<meta name="description" content="trang web bài tập css, html">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>bài tập menu dọc</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0 10px;
+			padding: 0;
+		}
+		aside.menu_doc{
+			font-family: "VNI-Franko";
+			font-size: 15px;
+			width: 200px;
+
+		}
+		aside.menu_doc > ul>li{
+			margin:2px 0;
+			height: 35px;
+			line-height: 35px;
+			text-indent: 15px;
+			list-style: none;
+			background-color: #52F378;
+		}
+		a{
+			color: black;
+			text-decoration: none;
+		}
+		aside.menu_doc>ul>li:hover{
+			background-color: #CFCCCC;
+		}
+		object.s{
+			overflow-y:hidden;
+			position: fixed;
+		}
+	</style>
+	<noscript>Trình duyệt không hỗ trợ javascript</noscript>
+</head>
+<body>
+	<aside class="menu_doc">
+	    <ul>
+	        <li><a href="#">Trang chủ</a></li>
+	        <li><a href="#">Tin tức</a></li>
+	        <li><a href="#">Sản phẩm</a></li>
+	        <li><a href="#">Liên hệ</a></li>
+	    </ul>
+	</aside>
+	<div class="container">
+		<canvas id="mycanvas" width="100" height="100" style="border:1px solid #000000;">
+			
+		</canvas>
+		<video src="video/mov_bbb.mp4" autobuffer  autoloop loop controls poster="img/300x250.png"></video>
+		<audio src="audio/horse.ogg" autoplay muted autobuffer autoloop loop controls></audio>
+		<object data="audio/horse.ogg" ></object>
+		<object data="video/mov_bbb.mp4"></object>
+		<!-- mục đích hỗ trợ hầu hết các media trên website, object hỗ trợ hầu hết các trình duyệt -->
+		<!-- <object class="s" data="http://www.bongdaplus.vn" width="500"></object> --> <br>
+		<embed src="img/bookmark.swf" type=""></embed>
+		<!-- hết thẻ media -->
+	</div>
+	<canvas id="myCanvas" width="500" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<canvas id="myCanvas1" width="300" height="150" style="border:1px solid #d3d3d3;">
+</canvas>
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+//L 
+ctx.beginPath();
+ctx.lineWidth = "5";
+ctx.strokeStyle = "green";  // Green path
+ctx.moveTo(20, 20);
+ctx.lineTo(20, 120);
+ctx.moveTo(20, 118);
+ctx.lineTo(70, 118);
+ctx.stroke();  // Draw it
+// O
+ctx.beginPath();
+ctx.strokeStyle = "purple";  // Purple path
+ctx.arc(110,85,35,0*Math.PI,2*Math.PI)
+ctx.stroke();
+// n
+ctx.beginPath();
+ctx.strokeStyle=("red");
+ctx.moveTo(160,50);
+ctx.lineTo(160,120);
+ctx.moveTo(159,51);
+ctx.lineTo(209,119);
+ctx.moveTo(210,50);
+ctx.lineTo(210,120);
+ctx.stroke();
+// G
+ctx.beginPath();
+ctx.strokeStyle=("pink");
+ctx.arc(260,85,35,0.2*Math.PI,1.7*Math.PI);
+ctx.moveTo(288,90);
+ctx.lineTo(288,122);
+ctx.moveTo(278,90);
+ctx.lineTo(298,90)
+ctx.stroke();
+
+var c=document.getElementById('myCanvas');
+var ctx=c.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320,75);
+ctx.quadraticCurveTo(340,130,380,75);
+ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle=("black");
+ctx.moveTo(338,77);
+ctx.lineTo(342,77);
+ctx.moveTo(358,77);
+ctx.lineTo(362,77);
+ctx.stroke();
+
+// bình
+
+var c = document.getElementById("myCanvas1");
+var ctx = c.getContext("2d");
+
+ctx.beginPath();
+ctx.lineWidth = "5";
+ctx.strokeStyle = "red";  // Green path
+ctx.moveTo(20, 20);
+ctx.lineTo(20, 120);
+ctx.moveTo(20, 23);
+ctx.bezierCurveTo(80,0,80,80,20,60);
+ctx.moveTo(20, 62);
+ctx.bezierCurveTo(80,60,100,130,20,118);
+ctx.stroke();  
+  
+ctx.beginPath();
+  ctx.strokeStyle = "blue";
+  ctx.moveTo(90,35);
+  ctx.lineTo(100, 40);
+  ctx.moveTo(100,51);
+  ctx.lineTo(100, 55);
+  ctx.moveTo(100,60);
+  ctx.lineTo(100, 120);
+ctx.stroke();
+  
+ctx.beginPath();
+  ctx.strokeStyle = "yellow";
+  ctx.moveTo(120,60);
+  ctx.lineTo(120, 120);
+  ctx.moveTo(120,61);
+  ctx.lineTo(160, 119);
+  ctx.moveTo(160,60);
+  ctx.lineTo(160, 120);
+ctx.stroke();
+  
+ctx.beginPath();
+  ctx.strokeStyle = "pink";
+  ctx.moveTo(180,60);
+  ctx.lineTo(180, 120);
+  ctx.moveTo(180,90);
+  ctx.lineTo(220, 90);
+  ctx.moveTo(220,60);
+  ctx.lineTo(220, 120);
+ctx.stroke();
+</script>
+
+</body>
+</html>

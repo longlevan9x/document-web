@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Lê Văn Long"/>
+	<meta name="keyword" content="on tap css"/>
+	<meta name="descrition" content="trang web ôn tap css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>Ôn tập tạo menu đa cấp dọc</title>
+	<link rel="icon" href="/favicon.png">
+	<link rel="stylesheet" href="css/css_bt_ontap_taomenu_dacap_ok.css" type="text/css">
+	<style type="text/css">
+		div.transition1{
+		    width: 100px;
+		    height: 100px;
+		    background: red;
+		    -webkit-transition: width4s ease-in-out, height 2s ease-in-out; /* For Safari 3.1 to 6.0 */
+		    transition: width 4s ease-in-out, height 2s ease-in-out ;  
+		    /* transition :  propety,duration,timing,delay; ex:  transition:width 3s ease-in 7s,height 4s ease-in 7s; */
+		}
+		div.transition1:hover {
+		    width: 300px;
+		    height: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<ul>
+			<li class="menu_main"><a href="#">Trang chủ</a></li>
+			<li class="menu_main">
+				<a href="#">Danh mục</a>
+				<ul class="dr_cap1">
+					<li class="lidr1">
+						<a href="#">website</a>
+						<ul class="dr_cap2">
+							<li class="lidr2">
+								<a href="#">Lập trình Web</a>
+								<ul class="dr_cap3">
+									<li class="lidr3"><a href="#">PHP,Mysql</a></li>
+									<li class="lidr3"><a href="#">ASP</a></li>
+									<li class="lidr3"><a href="#">Python</a></li>
+								</ul>
+							</li>
+							<li class="lidr2">
+								<a href="#">Thiết kế Web</a>
+								<ul class="dr_cap3">
+									<li class="lidr3"><a href="#">HTML</a></li>
+									<li class="lidr3">
+										<a href="#">CSS</a>
+										<ul class="dr_cap4">
+											<li class="lidr4"><a href="#">Css</a></li>
+											<li class="lidr4"><a href="#">Css3</a></li>
+										</ul>
+									</li>
+									<li class="lidr3"><a href="#">Javascript</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="lidr1">
+						<a href="#">Di động</a>
+						<ul class="dr_cap2">
+							<li class="lidr2"><a href="#">Android</a></li>
+							<li class="lidr2"><a href="#">IOS</a></li>
+							<li class="lidr2"><a href="#">Window phone</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="menu_main">
+				<a href="#">Giới thiệu</a>
+				<ul class="dr_cap1">
+					<li class="lidr1"><a href="#">Giới thiệu về A</a></li>
+					<li class="lidr1"><a href="#">Giới thiệu về B</a></li>
+				</ul>
+			</li>
+			<li class="menu_main"><a href="#">Liên hệ</a></li>
+			<li class="menu_main"><a href="#">Đánh giá</a></li>
+		</ul>
+	</div>
+	<div class="transition1"></div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>javascript buổi 4</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+	      /* p{
+	      	background-color: darkblue;
+
+	      } */
+	     
+	</style>
+	<script  type="text/javascript" charset="utf-8" >
+		// function myunload() {
+		// 	window.onbeforeunload=function () { //hằng số hàm
+		// 		return'	';
+		// 	}
+		// }
+		// -----------------DOM----------------- 
+		// là mô hình phân cấp các đối tượng trong html
+		// các loại dom
+		// -- dom element - truy xuất đến các thẻ html
+			//-- tìm theo id , name, class , selector(#a, .b) css -> kết quả trả về là mảng object
+		// -- dom html -- thay đổi giá trị nội dung trong thẻ html
+		// -- dom css-- thay đổi giá trị css
+		// -- dom event -- nhiệm vụ gán các sự kiện cho các thẻ html
+			//- elementObject.event= function(){};
+		// -- dom listener -- nhiệm vụ lắng nghe các sự kiện trên thẻ html
+			//-- elementOject.addEventListener("eventName","function(){}");
+
+		// var btn=document.getElementById("mybtn");
+		// console.log(btn);
+
+		// .innerHTML= new html
+		// .Attribute = new value
+		//	.setAttribute(attribute,value);
+		// .element.style.value()
+		// -----------------BOM------------------------
+		// là các đối tượng liên quan đến trình duyệt
+		// -- windown location history -- ít dùng screen  navigation popup timing cookie
+		// -- trong window : xác định kich thước trình duyệt, đóng hoặc mở trình duyệt
+		//   window.innerHeight
+		// --  BOM điều hướng.
+		// .reload
+		// .replace
+		// ------- SCREEN
+
+		// setTimeout -- thực hiện duy nhất 1 lần và setInterval -- thực hiện mãi mãi cho đế khi huỷ
+		// clearTimeout
+	</script>
+</head>
+<body >
+	<button type="" onclick="myunload();">Click	!</button>
+	<button type="" id="mybtn" class="btn" name="my_btn">Click Me!</button> 
+	<!-- object chứa các phần tử có thuộc tính là id -->
+	<p id="myText">Hôm nay trời nắng đẹp</p>
+	<br/>
+	<input id="txt_idbtn" name="txt_button" class="txt_classbt" type="button" name="" value="Change!">
+	<script  type="text/javascript" charset="utf-8" >
+	// var btn=document.getElementByClassName("btn"); js không hỗ trợ class name
+		var btn=document.getElementById("mybtn");
+		// console.log(btn);
+		// btn.onclick=function () { // dom event
+		// 	alert("hello");
+		// }
+
+		// thao tác với dom  listener 
+		//------------- Dom html
+		btn.addEventListener('click',function(){
+			window.open("https://google.com","long",'height=100px,titlebar=log');
+			// var mytext=document.getElementById("myText");
+			// mytext.innerHTML="Hôm nay trời mưa to";
+			var mytext=document.getElementById("myText").innerHTML="Hôm nay trời mưa to";
+
+			// var mytype=document.getElementById("txt_idbtn");
+			// mytype.setAttribute('type', 'text');
+			var mytype=document.getElementById("txt_idbtn").setAttribute('type', 'text');
+
+			//-------------------- DOM css
+
+			var changeColor = document.getElementById("myText").style.fontSize="30px";
+							document.getElementById("myText").style.color="yellowgreen";
+							document.getElementById("myText").style.backgroundColor="blue";
+							document.getElementById("myText").style.width="300px";
+							document.getElementById("myText").style.fontFamily="Tahoma";
+
+		});
+			var widthBrowser=window.innerWidth;// lấy chiều cao và chiều rộng trình duyệt
+			var heightBrowser=window.innerHeight;
+			document.write(widthBrowser);	
+			document.write(heightBrowser);
+
+			//screen
+			var screenWidth=screen.width;
+			document.write("<br/>"+screenWidth);
+			var screenHeight=screen.height;
+			document.write("<br/>"+screenHeight);
+			
+			// nosql không có mỗi quan hệ giữa các bảng
+			// var my_do=function () {
+			// 	alert("Settimeout");
+			// }
+			// var clear1=setTimeout(my_do,1000);
+			// function clear_timeout(){
+			// 	clearTimeout(clear1);
+			// }
+			// clear_timeout();// xóa settimeout
+
+			// -----setinterval
+			var my_do=function () {
+				alert("setinterval");
+			}
+			var clear1=setInterval(my_do,1000);
+			function clear_interval(){
+				clearTimeout(clear1);
+			}
+			clear_interval();// xóa settimeout
+
+			
+	</script>
+</body>
+</html>

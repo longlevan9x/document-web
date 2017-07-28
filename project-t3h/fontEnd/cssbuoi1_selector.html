@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="long">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>buoi 1 css</title>
+	<link rel="stylesheet" href="css/cssontap_selector.css">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			/* dùng 1 lần, để reset trình duyệt 
+			viết đầu tiên*/
+		}
+		#id{
+				background-color: red;
+			}
+		.myclassdiv{
+			background-color: blue;
+		}	
+		div{
+			width: 500px;
+			margin: auto;
+			min-height: 300px;
+			background-color: #ccc;
+		}
+		p#p1{ /* dùng kết hợp cả thẻ html và #id để dễ nhớ selector thuộc thẻ nào*/
+			color: red;
+		}
+		p.myp2 { /*đang tìm đến thẻ p có class là myp2*/
+			color:  white;
+		}
+		/* thứ tự ưu tiên chạy css #id đầu tiên .thẻ html và .class là thứ tự ngang nhau */
+
+		input[type]{
+			width: 300px;
+			height: 30px;
+		}
+		input[type="password"]{ /*chọn text box password*/
+			width: 200px;
+			height: 40px;
+		}
+		input[type="password"]:focus{ /*chọn text box password*/
+			width: 400px;
+			height: 40px;
+		}
+		input[type="checkbox"]:checked{ /*tìm đến input có type =checked thì áp dụng css*/
+			height: 100px;
+		}
+		p[id="p4"]{ /**/
+			color: red;
+		}
+		p[class~="myp3"]{ /*~= là sự lựa chọn tương đối, = tuyệt đối*/
+ 			color: yellow;
+		}
+		p[class^="myp5"]{ /*chọn các ký tự  từ trái qua phải,  */ 
+			color: green;
+		}
+		a[href$="website"]{ /*chỉ chấp nhận là giá trị kết thúc của */
+			color: red;
+		}
+		a[href*="web"]{ /*chọn bất kỳ giá trị trong html*/
+			color: violet;
+		}
+		span[class|="span"]{ /*phân loại các giá trị có giá trị -? ở cuối. vd span-1, span-2*/
+			color: blue;
+		}
+		div.div1+div.div2{
+			background-color: yellowgreen;
+		}
+		div.div0~div.div3{
+			background-color: green;
+			min-height: 100px;
+		}
+		div.myclassdiv3 div.div0>div.div0-1>div.div0-2{ /*chọn selector bắt buộc ngay sau*/
+			background-color: black;
+			min-height: 200px;
+		}
+		div.myclassdiv3 div.div1-1  { /*chọn selector bất kì ở sau*/
+			background-color: red;
+			width: 100px;
+		}
+		/*  */
+		div.div2 ul#mylist li:first-child a{ /*chọn thành phần con đầu tiên*/
+			color: red;
+		}
+		div.div2 ul#mylist li:last-child a{ /*chọn thành phần con cuối cùng*/
+			color: blue;
+		}
+		div.div3 ul#mylistdiv3 li:first-of-type a{
+			color:  #00BAFF;
+		}
+		div.div3 ul#mylistdiv3 li:last-of-type a{
+			color:  gray;
+		}
+		div.div4 ul#mylistdiv4 li:nth-child(2){
+			background-color: gold;
+		}
+		div.div4 ul#mylistdiv4 li:nth-last-child(4){
+			background-color: black;
+		}
+		div.div5 ul#mylistdiv5 li:nth-of-type(3){
+			background-color: red;
+		}
+		div.div5 ul#mylistdiv5 li:nth-last-of-type(1){
+			background-color: blue;
+		}
+		/* link */
+		a:link{
+			
+		}
+		h1::first-letter{ /*chữ cái đầu tiên*/
+			background-color: red;
+		}
+		h1::first-line{ /*dòng đầu đầu tiên*/
+			background-color: pink;
+		}
+		h1::selection{ /*hiệu ứng được áp dụng khi văn bản được chọn*/
+			background-color: black;
+		}
+		h1::after{ /*chèn vào cuối */
+			content: "long";
+		}
+		h1::before{ /*chèn vào đầu*/
+			content: "le van";
+		}
+		ul,ol{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+<span class="s">
+	<ul style="margin-left:50px;" class="tongquancss">
+	    <li><strong> cascsding style sheets ( CSS ):</strong> là ngôn ngữ định định dạng lại phần tử html</li>
+	    	<ul style="margin-left:55px;"">
+	    	    <li>inline style: cục bộ</li>
+	    	    <li>internal style sheets: nội tuyến</li>
+	    	    <li>external style sheets: ngoại tuyến </li>
+	    	    <li>@import"demo.css" : nhúng 1 tập tin css vào file css khác</li>
+	    	</ul>
+	    	<br/>
+	    <li>thứ tự ưu tiên: CSS cục bộ"ưu tiên sử dụng trước" --> css nội tuyến ( style )"tiếp theo"-->css ngoại tuyến ( link ) "cuối cùng".</li>
+	    <li>cú pháp:<br>
+		selector(bộ chọn)<br>
+		thuộc tính(property)<br>
+		giá trị(value)</li>
+	</ul>
+	<ol type="A" style="margin-left:50px;">
+	    <li ><!--A--><b>Các loại selector cơ bản:</b>
+	    	<ol type="1" style="margin-left:55px;">
+	    		<li><!-- 1. --><b>type selector</b>(html selector): dùng các thẻ html để làm bộ chọn.</li>
+	    		<li><!-- 2. --><b>class selector:</b> dùng các giá trị của thuộc tính <strong>(.my class)
+		    		</strong> trong thẻ hmtl làm bộ chọn.</li>
+	    		<li><!-- 3. --><b>id selector:</b>  dùng các giá trị của thuộc tính <strong>#id</strong> trong thẻ hmtl làm bộ chọn.</li>
+	    		<li><!-- 4. --><b>universal selector:</b> (*) chọn tất cả css. dùng để reset.</li>
+	    		<li><!-- 5. --><b>Attribute selector:</b> [attr="value"] cho phép chọn các thẻ/ phần tử  dựa vào thuộc tính của thẻ đó.
+	    			<ol type="1" start="51" style="margin-left:60px;">
+		    			<li><!-- 5.1.  --><big>E[<em>attr</em>] :</big> chọn E có thuộc tính là attr mà ko quan tâm tới giá trị </li>
+		    			<li><!-- 5.2. --><big>E[<em>attr="value"</em>] : </big>chọn E có thuộc tính attr được thiết lập các giá trị ban đầu là value</li>
+		    			<li><!-- 5.3. --> <big>E[<em>attr~="value"</em>]</big> : chọn E  có attr mà trong ds các giá trị của thuộc tính có chứa giá trị value</li>
+		    			<li><!-- 5.4 --><big>E[<em>attr^="value"</em>]</big> : chọn E với thuộc tính attr có giá trị bắt đầu là value</li>
+		    			<li><!-- 5.5 --><big>E[<em>attr$="value"</em>]</big> : chọn E  với thuộc tính attr có giá trị kết thúc là value</li>
+		    			<li><!-- 5.6. --><big>E[<em>attr*="value"</em>]</big>: chọn E  với thuộc tính attr có chứa giá trị là value</li>
+		    			<li><!-- 5.7. --><big>E[<em>attr|="value"</em>]</big>: chọn E  với thuộc tính attr có giá trị thuộc tính có dạng  là value-?</li>
+	    			</ol>
+	    		</li>
+	    	</ol>
+	    </li>
+	    <li><!--B--><b>Các loại selector phân cấp </b>(hmtl selector) <big>Tag-> các thẻ html</big>
+			<ol type="1" style="margin-left:55px;">
+				<li><!-- 1. --><b>Adjacent sibling selector:</b> <big><em>tag01 + tag02</em></big> -> chọn tất thành phần (tag02) đặt kế và sau tag01 </li>
+				<li><!-- 2. --><b>Genaral sibling selector : </b>	 <big><em>tag01 ~ tag02</em></big> -> chọn tất thành phần (tag02) có  tag01 ở trước </li>
+				<li><!-- 3. --><b>Child selector:</b> <big><em>tag01 > tag02</em></big> -> chọn tất thành phần (tag02) có cha là  tag01 </li>
+				<li><!-- 4. --><b>Gescendant selector:</b>  <big><em>tag01  tag02</em></big> -> chọn tất thành phần (tag02) bên trong  tag01 </li>
+				<li><!-- 5. --><b>Gom nhóm các selector:</b> <big><em>tag01,tag02</em></big>-> chọn tất cả các thành phần tag01 và tag02.  <br>
+					<strong>Mục đích:</strong>giúp thiết lập các giá trị cho các thuộc tính chung giống nhau của nhiều bộ chọn khác nhau cùng lúc. giúp giảm dần kích thước tệp tin css, giảm thời gian tải web. </li>
+			</ol>
+	    </li>
+	    <li><!--c--><b>Pseudo class selector:</b> cho phép định dạng các phần tử không nằm trong mã html(	documen tree)
+			<ol type="1" style="margin-left:55px;">
+			    <li><!-- 1. -->Dùng để thêm hiệu ứng đặc biệt cho bộ chọn <br></li>
+			    <li><!-- 2. -->Cho phép bộ chọn cho các phần tử mà không quan tâm đến tên thuộc tính hay nội dung. <br></li>
+			    <li><!-- 3. -->Cú pháp: <b>selector:pseudo-class</b><em>{property:value;}</em>
+					<ol style="margin-left:60px;">
+					    <li><b>:first-child</b> ->chọn thành phần đầu tiên của thành phần cha chứa nó</li>
+					    <li><b>:first-of-type</b>-> chọn thành phần con đầu tiên hoặc duy nhất trong các thành phần cha </li>
+					    <li><b>:last-child</b>->chọn thành phần cuối cùng của thành phần cha chứa nó. chỉ chọn thành phần có thành phần cha, những thành phần độc lập sẽ ko đc chọn </li>
+					    <li><b>:last-of-type</b> ->chọn thành phần con cuối cùng hoặc duy nhất trong các thành phần cha </li>
+					    <li><b>:nth-child(n)</b>->chọn thành phần thứ "n" trong thành phần cha.chỉ được chọn thành phần có thành phần cha, những thành phần độc lập sẽ ko đc chọn </li>
+					    <li><b>:nth-last-child</b>-> chọn thành phần thứ "n" tính từ thành phần cuối cùng trong thành phần cha,thành phần độc lập  không được chọn </li>
+					    <li><b>:nth-of-type(n)</b>->chọn thành phần thứ "n" </li>
+					    <li><b>:nth-last-of-type(n)</b>:chọn thành phần thứ "n" từ cuối cùng của thành phần cha </li>
+					    <li><b>:only-child</b>-> chọn con trong cha ,khi các thành phần có duy nhất 1con, các cái khác không áp dụng được,thành phần độc lập không được chọn <</li>
+					    <li><b>:focus</b> -> thành phần sẽ focus khi được chọn(vd; con trỏ nhấp nháy trong ô textbox)</li>
+					    <li><b>:checked</b>-> chọn các thành phần dã checked(dùng cho checkbox or radio)</li>
+					    <li><big><em>Anchor pseudo class:</em></big>định nghĩa style cho thẻ link</li>
+					    <li><b>:active</b>-> chọn các liên kết được kích hoạt </li>
+					    <li><b>:visited</b>-> định dạng cho các thành phần đã được click <br></li>
+					    <li><b>:link</b> -> định dạng cho tất cả các liên kết chưa được click </li>
+					    <li><b>:hover</b> -> định dạng các thành phần khi con trỏ chuột di đến </li>
+					</ol>
+			    </li>
+			    <li><!-- 4. --><b>Pseudo-elements:</b> bổ sung một số hiệu  ứng đặc biệt cho bộ chọn.cho phép chọn và định dạng cho các thành phần <big>văn bản đặc biệt</big>
+					<ol style="margin-left:60px;">
+					    <li><big>Pseudo-elements:</big>pseudo-element{property:value;} css2 <br> 
+					    <b>selector::pseudo-element{property:value;} css3</b></li>
+					    <li><b><em>::first-letter</em></b>(:first-letter)-> phần tử mô tả ký tự đầu tiên của văn bản</li>
+					    <li><b><em>::first-line</em></b> quy định style cho thành phần đầu tiên</li>
+					    <li><b><em>::after</em></b> chèn nội dung phía sau nội dung của 1 tp</li>
+					    <li><b><em>::befor	</em></b>	chèn nội dung phía trước nội dung của  1 tp</li>
+					    <li><b><em>::selection</em></b>(css3) hiển thị hiệu ứng css khi văn bản được chọn</li>
+					</ol>
+			    </li>
+			</ol>
+	    </li>
+	</ol>
+</span>
+	<br>
+	<div class="viduontap">
+		<div class="vidudiv1">
+		Attribute selector
+			<div class="vidudiv1-1">
+				
+			</div>
+		</div>
+		<div class="div2">
+			
+		</div>
+	</div>
+	<br>
+	<div id="myiddiv" class=" myclassdiv">phần học css
+	<h1 style="width:300px;background-color:yellow;">Buổi học buồn ngủ quá nhưng vẫn vui </h1>
+		<p id="p1">Đây là thẻ p thứ nhất</p>
+		<p id="p2" class="myp2">Đây là thẻ p thứ hai</p>
+		<p id="p3" class="myp3 myp33">Đây là thẻ p thứ ba</p>
+		<p id="p4">Đây là thẻ p thứ tư</p>
+		<p id="p5" class="myp5">Đây là thẻ p thứ năm</p>
+		<input type="checkbox" name="txtcheck" checked="checked" value=""><br>
+		<a href="#">:Active</a><br>
+		<a href="#">:hover</a><br>
+		<a href="#">:link</a><br>
+		<a href="#">:visited</a><br>
+	</div>
+	<br>
+	<div class="myclassdiv2">
+	<br>
+		<input type="text" name="txthoten"/> 
+		<br>
+		<input type="password" name="txtpass">
+		<br>
+		<a href="mywebsite" title="">mywebsite</a>
+		<a href="website" title="">website</a>
+		<span class="span-1">span1</span>
+	</div>
+	<br>
+	<span>mydiv3</span>
+	<div class="myclassdiv3">
+		<div class="div0">
+		<span>div0</span>
+			<div class="div0-1">
+				<div class="div0-2">
+				
+				</div>
+			</div>
+		</div>
+		<div class="div1">
+		<span>div1</span>
+			<div class="div1-1">
+				
+			</div>
+		</div>
+		<div class="div2">
+		<span>div2</span>
+			<ul id="mylist">
+			    <li><a href="">đây là link1</a></li>
+			    <li><a href="">đây là link2</a></li>
+			    <li><a href="">đây là link3</a></li>
+			    <li><a href="">đây là link4</a></li>
+			</ul>
+		</div>
+		<div class="div3">
+		<span>div3</span>
+			<ul id="mylistdiv3">
+			    <li><a href="">đây là link1</a></li>
+			    <li><a href="">đây là link2</a></li>
+			    <li><a href="">đây là link3</a></li>
+			    <li><a href="">đây là link4</a></li>
+			</ul>
+		</div>
+		<div class="div4">
+		<span>div4</span>
+			<ul id="mylistdiv4">
+			    <li><a href="">đây là link1</a></li>
+			    <li><a href="">đây là link2</a></li>
+			    <li><a href="">đây là link3</a></li>
+			    <li><a href="">đây là link4</a></li>
+			</ul>
+		</div>
+		<div class="div5">
+		<span>div5</span>
+			<ul id="mylistdiv5">
+			    <li><a href="">đây là link1</a></li>
+			    <li><a href="">đây là link2</a></li>
+			    <li><a href="">đây là link3</a></li>
+			    <li><a href="">đây là link4</a></li>
+			</ul>
+		</div>
+	</div>
+	<br>
+	
+</body>
+</html>

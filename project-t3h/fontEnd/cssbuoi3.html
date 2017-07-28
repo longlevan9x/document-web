@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>css buổi 3</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		section{
+			width: 980px;
+			min-height: 500px;
+			margin: auto;
+			background-color: #ccc;
+		}
+		div.div1{
+			width: 300px;
+			min-height: 500px;
+			float: left;
+			background-color: green;
+		}
+		#myImg{
+			position: absolute;
+		}
+		p.relative{
+			height: 100px;
+			width: 200px;
+			background-color: red;
+			position: relative;
+		}
+		div.div2{
+			width: 300px;
+			height: 500px;
+			float: left;
+			background-color: yellow;
+		}
+		footer{
+			
+			width: 100%;
+			min-height: 100px;
+			background-color: blue;			
+		}
+		.over{
+			/* height: 200px; */
+			width: 100%;
+			/* border: 1px solid black;*/
+			overflow: hidden; 
+			border-image: url('img/border-img.png') 30/*slice*//10px 20px/*width*// 0 10px 10px 30px/**/ round;
+			-webkit-border-image: url('img/border-img.png')30/*slice*//10px 20px/*width*// 0 10px 10px 30px/**/ round;
+			-moz-border-image: url('img/icon_index.png') 20/10px 20px/ 0 10px 10px 30px round;
+		}
+		/* gradient */
+	.input{
+		border-radius: 10px ;
+		border: 3px solid red;
+		
+	}
+		
+		/* các tiền tố bắt buộc trong css3 -webkit- , -moz,-o ,-internet ex */
+		.gradient{
+			width: 100%;
+			height: 100px;
+			border: 1px solid black;
+			background: linear-gradient(90deg,rgba(255, 0, 0,255));
+			 background:-webkit-linear-gradient(90deg,red,yellow,blueviolet,pink); 
+			background:-webkit-linear-gradient(90deg,rgba(255, 0, 0,255));
+			/* 10deg là truyền theo độ */
+			/* sử dụng nhiều màu */
+			/* transpa */
+		}
+	</style>
+</head>
+<body>
+		<section>
+		<div class="div1">
+			<h1>đây là div1</h1>
+			<img id="myImg" src="img/300x250.png" alt=""/>
+			<p class="relative">đây là dòng chữ không có nhiều</p>
+		</div>
+		<div class="div2">Day la div2
+			<div class="over">
+				<p>What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+			
+
+		</div><br>
+		<input type="text" class="input" name="" style="width:200px;height:40px;" value="" placeholder="">
+			</div>
+			<br>
+			
+		</section>
+		<footer>
+			<span>Day la footer</span>
+			<div class="gradient">
+				
+			</div>
+		</footer>
+</body>
+</html>

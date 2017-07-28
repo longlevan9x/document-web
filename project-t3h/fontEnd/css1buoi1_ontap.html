@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="author" content="long le van">
+	<meta name="keyword" content="ontap css"/>
+	<meta name=description content="on tap"/>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>ôn tập css</title>
+	<link rel="icon" href="img/3-1.jpg">
+	<link rel="stylesheet" href="cssontap_selector.css"/>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0 ;
+			padding: 0;
+		}
+		.container{
+			margin:0 auto;
+			width: 980px;
+		}
+		.frm_classontap{
+			padding: 20px 0 0 20px;
+			width:500px;
+			min-height: 500px;
+			border: 1px solid black;
+		}
+		input[type]{
+			width: 300px;
+		}
+		input[type]{
+			width: 300px;
+		}
+		input[id="txt_idhoten"]{
+			background-color: red;
+		}
+		input[name~="txt_taikhoan"]{
+			color: blue;
+		}
+		input[name^="txtname"]{
+			background-color: blue;
+		}
+		input[name*="long"]{
+			color: pink;
+		}
+		input[name|="txtname2"]{
+			color: red;
+		}
+		input[name$="-nm"]{
+			background-color: gray;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form name="frm_ontap" class="frm_classontap" action="css1buoi1_ontap_submit" method="get" accept-charset="utf-8">
+			<label for="txt_idhoten">Họ Tên </label><input type="text" name="txt_hoten" id="txt_idhoten" value="" placeholder="Nhập họ tên" autofocus>
+			<br>
+			<label for="txt_idtaikhoan">Tên tài khoản</label>
+			<input type="text" name="txt_taikhoan taikhoan" id="txt_idtaikhoan" placeholder="Nhập tài khoản" value="">
+			<br>
+			<label for="txt_idmatkhau">Mật khẩu</label>
+			<input type="password" name="txt_matkhau" id="txt_idmatkhau" value="" placeholder="Nhập mật khẩu">
+			<br>
+			<input type="text" name="txtname1" value="" placeholder=""><br>
+			<input type="text" name="txtname2-nm" value="" placeholder=""><br>
+			<input type="text" name="txt2.long" value="" placeholder=""><br>
+				
+		</form>
+	</div>
+</body>
+</html>

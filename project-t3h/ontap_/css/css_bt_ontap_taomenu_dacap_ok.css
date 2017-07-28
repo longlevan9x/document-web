@@ -1,0 +1,132 @@
+/*  function dequyMenu($sourceArr,$parent_id,&$menuUl){
+		$newArr=array();
+		if (count($sourceArr) >0){
+			foreach ($sourceArr as $key => $value) {
+				if ($value['parents'] == $parent_id)  {
+					$newArr[]=$value;
+					unset($sourceArr[$key]);
+					dequyMenu($sourceArr, $value['id'],$menuUl);
+				}
+			}
+		}
+	}
+	if ($newArr) {
+		
+	} */
+ *{
+	margin: 0;
+	padding: 0;
+
+}
+#wrapper{
+	padding: 10px;
+	margin: 10px;
+
+}
+div#wrapper ul{
+	/* background-color: #E26464; */
+	padding: 0;
+	width: 200px;
+	padding: 0;
+	list-style: none;
+	border-radius: 0 10px 0px 0;
+	box-shadow: black 3px 3px 5px;
+	text-shadow: ;
+}
+div#wrapper ul li{
+	height: 40px;
+	line-height: 40px;
+	width: 200px;
+	position: relative;
+	text-indent: 20px;
+	border-bottom: 1px solid white;
+}
+
+div#wrapper ul li.menu_main{
+	background-color: #E942E7;
+}
+div#wrapper ul li a{
+	text-decoration: none;
+	padding: 0 10px;
+	color: black;
+	font-size: 17px;
+	font-weight: bold;
+	display: block;
+}
+div#wrapper ul li.menu_main:hover{
+	background-color: #C516C3;
+}
+div#wrapper ul li:hover{
+	border: 2px solid white;
+}
+/* bắt đầu drowdown cap 1 */
+div#wrapper ul li ul.dr_cap1 {
+	position: absolute;
+	top: 0;
+	left: 200px;
+	width: 200px;
+	display: none;
+}
+div#wrapper ul li:hover ul.dr_cap1{
+	display: block;
+	background-color:#EC6B1D ;
+}
+div#wrapper ul li ul.dr_cap1 li:hover{
+	background-color: yellowgreen;
+}
+/* hết dropdown cap 1 */
+/* bắt đầu drowdown cap 2 */
+div#wrapper ul li ul.dr_cap1 li ul.dr_cap2{
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 200px;
+}
+div#wrapper ul li ul.dr_cap1 li:hover ul.dr_cap2{
+	display: block;
+	background-color: #29B8A9;
+} 
+div#wrapper ul li ul.dr_cap1 li ul.dr_cap2 li:hover{
+	background-color: #0D8567;
+} 
+/* hết dropdown cap 2 */
+/* bắt đầu drowdown cap 3 */
+div#wrapper ul li ul li ul.dr_cap2 li ul.dr_cap3{
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 200px;
+	width: 200px;
+}
+div#wrapper ul li ul li ul.dr_cap2 li:hover ul.dr_cap3{
+	display: block;
+	background-color: #FA3E6F;
+}
+div#wrapper ul li ul li ul.dr_cap2 li ul.dr_cap3 li:hover{
+	background-color: #F17979; 
+}
+/* hết dropdown cap 3 */
+/* bắt đầu drowdown cap 4 */
+div#wrapper ul li ul li ul li ul.dr_cap3 li ul.dr_cap4{
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 200px;
+	width: 200px;
+}
+div#wrapper ul li ul li ul li ul.dr_cap3 li:hover ul.dr_cap4{
+	display: block;
+	background-color: #3777A0;
+}
+div#wrapper ul li ul li ul li ul.dr_cap3 li ul.dr_cap4 li:hover{
+	background-color: #366879;
+}
+/* hết dropdown cap 4 */
+/* last-child */
+div#wrapper ul li.menu_main:last-child,
+div#wrapper li.menu_main  li.lidr1:last-child,
+div#wrapper ul li.menu_main li.lidr1  li.lidr2:last-child,
+div#wrapper ul li.menu_main li.lidr1 li.lidr2  li.lidr3:last-child,
+div#wrapper ul li.menu_main li.lidr1 li.lidr2  li.lidr3 li.lidr4:last-child{
+	border-bottom: 0.1px solid black;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+
+	<title>buổi 3</title>
+	<style type="text/css" media="screen">
+	*{/* đại diện cho tất cả các thẻ html*/
+		margin:0; 
+		padding: 0;
+	}
+	</style>
+	<noscript>Trình duyệt không hỗ trợ javascript</noscript>
+</head>
+<body>
+	<div style="width: 980px; margin: auto; min-height: 600px;background-color: gray;"> 
+		<!--style là thuộc tính html của thẻ div-->
+			<!-- min hieght là độ rộng tối thiểu -->
+		<!-- tạo vùng làm việc trên website -->
+		<header id="header" class="" style="width:100%;background-color: blue; height: 120px;">
+			<!-- để logo giới thiệu về trang web -->
+			<!-- tạo ra vùng làm việc đầu tiên của 1 trang web -->
+			<h1 style="text-align: center; color: white;">Đây là thẻ header</h1>
+		</header><!-- /header -->
+		<nav style="width:100%; background-color: green;">
+		<!-- tạo nên thanh điều hướng cho trang web , tạo menu-->
+			<ul style="list-style:none; text-align:center;">
+				<!-- thẻ ul là thẻ tạo danh sách không có thứ tự -->
+				<li style="display: inline-block; padding: 10px;"><a href="#header" title="" style="text-decoration: none">Trang chủ </a></li>
+				<li style="display: inline-block; padding: 10px;"><a href="#header" title="" style="text-decoration: none">Sản phẩm </a></li>
+				<li style="display: inline-block; padding: 10px;"><a href="#header" title="" style="text-decoration: none">Giới thiệu</a></li>
+				<li style="display: inline-block; padding: 10px;"><a href="#header" title="" style="text-decoration: none">Liên hệ</a></li>
+				<!-- px là đơn vị đo trong css , được tình bằng 1 điểm ảnh trên màn hình -->
+			</ul>
+		</nav>
+		<section style="width:100%; background-color:Khaki; min-height:800px;">	
+		<!-- master lay out : tùy chỉnh phần nội dung (php) -->
+			<section style="width:600px; background-color: pink; float: left; height:800px;">
+			 <h2>Đây là vùng 1 /section</h2>
+			 <!-- học thẻ form -->
+			 	<form name="" action="#" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+			 		<!-- action : là nơi gủi dữ liệu đi xử  lý -->
+			 		<!-- method : phương thức gủi dữ liệu đi -->
+			 		<!-- accecpt-charset: quy định mã ký tự gủi đi UTF-8(unicode) ISO-8859-1(chữ latin)-->
+			 		<!-- enctype: quy định cách thức dữ liệu phải được mã hóa khi gủi đến máy chủ
+			 		             multipart/form-data: không cần mã hóa dữ liệu,chỉ áp dụng cho upload file lên 
+			 		             server -->
+			 		<!-- name: giúp sever nhận giữ liệu -->
+						<br>
+			 		các thẻ trong form <br>
+			 		<br>
+			 		
+			 		<input type="text" name="txt_hoten" id="txt_ht" value="Long Lê Văn" placeholder="Mời nhập họ tên" readonly="readonly" disabled="disabled" /> 
+			 			<!--type:quy định kiểu hiển thị của input-->
+			 			<!-- value: điền giá trị mặc định vào ô input -->
+			 			<!-- placeholder: hiển thị chữ mời ở ô input -->
+			 			<!-- readonly: không thể nhập dữ liệu vào được, có thể gửi dữ liệu  -->
+			 			<!-- disabled: không thể gủi dữ liệu lên sever,không để gủi thông tin linh tinh -->
+			 			<!-- required: kiểm tra bắt buộc 1 trường dữ liệu nào đó phải có dữ liệu -->
+			 			<!-- maxlength: cho phép nhập tối đa số lượng ký tự vào bàn phím -->
+			 		<br/>
+			 		<label for="txt_ht">Họ Tên:</label>	
+			 		<input type="text" name="txt_hoten" id="txt_ht" value="" placeholder="Mời nhập họ tên" required="required" maxlength="20" minlength="5" /> 
+			 		<br>
+			 		<label for="txt_pass">Mật khẩu:</label>
+			 		<input type="password" name="txtpassword" id="txt_pass" value="" placeholder="Nhập mật khẩu"/>
+			 		<br>
+			 		<label for="">The hidden:</label>
+			 		<input type="hidden" name="txt_hid" id="txthidden"/>
+			 		<!-- hidden: không hiển thị lên trình duyệt -->
+			 		<br>
+			 		<label for="txt_Email">Email</label>
+			 		<input type="email" name="txtemail" id="txt_Email" placeholder="Nhập vào email">
+			 		<br>
+			 		<label for="txt_area">Text Area</label>
+			 		<textarea name="txtarea" id="txt_area" cols="20" rows="10"></textarea>
+			 		<!-- nhập vào văn bản trong nhiều dòng -->
+			 		<br>
+			 		<label for="txt_check1">checkbox1</label>
+			 		<input type="checkbox" id="txt_check1" name="txt_chkbox">
+			 		<label for="txt_check2">checkbox2</label>
+			 		<input type="checkbox" id="txt_check2" name="txt_chkbox">
+			 		<!-- checkbox chọn 1 hoặc nhiều cái  1 lúc -->
+			 		<br/>
+			 		<label for="txt_rd1">Radio1</label>
+			 		<input type="radio" name="txtradio" id="txt_rd1">
+			 		<label for="txt_rd2">Radio2</label>
+			 		<input type="radio" name="txtradio" id="txt_rd2">
+			 		<!-- cùng tên thì là một nhóm thì chỉ được chọn 1 trong nhiều, khác tên  thì được chọn giống checkbox -->
+			 		<br>
+			 		<label for="sltGT">Select</label>
+			 		<select id="sltGT" name="GT" >
+			 			<option value="0">Nam</option><!--value là thuộc tính để sever nhận dữ liệu.-->
+			 			<option value="1">Nữ</option>
+			 		</select>
+			 		<br>
+			 		<label for="id_file">upload file:</label>
+			 		<input type="file" name="txtfile" id="id_file" value="">
+			 		<br>
+			 		<label for="id_btnsubmit">submit</label>
+			 		<input type="submit" name="btnsubmit" id="id_btnsubmit" value="Upload"/>
+			 		<br>
+					<label for="id_btnreset">submit</label>
+			 		<input type="reset" name="btnreset" id="id_btnreset" value="Xóa"/>
+			 		<h2>Một số thẻ html5 cực mới</h2>
+			 		<label for="txt_number">Number</label>
+			 		<input type="number" name="txtnumber" id="txt_number" max="100" min="50" value="50"/>
+			 		<!-- number chỉ được nhập số -->
+			 		<br>
+			 		<label for="txt_color">color</label>
+			 		<input type="color" name="txtcolor"  id="txt_color"/>	
+					<br>
+			 		<label for="txt_Date">Date</label>
+			 		<input type="date" name="txtdate"  id="txt_date"/>	
+					<br>
+			 		<label for="txt_URL">URL</label>
+			 		<input type="url" name="txturl"  id="txt_url"/>	
+			 		<!-- http/https giao thức mạng -->
+			 		<!-- domain. ip -->
+			 		<br>
+			 		<label for="txt_week">WEEK</label>
+			 		<input type="week" name="txtweek"  id="txt_week"/>	
+			 		<br>
+			 		<label for="txt_month">month</label>
+			 		<input type="month" name="txtmonth"  id="txt_month"/>	
+			 		<br>
+			 		<label for="txt_phone">phone</label>
+			 		<input type="phone" name="txtphone"  id="txt_phone"/>	
+			 		<br>
+				</form>			
+			</section>
+			<aside style="width:380px; background-color: Lime ; float: left; height:800px;">
+				<h2>Đây là aside</h2>
+			</aside>
+		</section>
+		<aside>
+			<!-- bố cục cho trang web -->
+		</aside>
+		<article style="width:100%; background-color: violet ; height:300px;">
+			<!-- định nghĩa vùng làm việc độc lập. --> 
+			<h2>Đây là article</h2>
+		</article>
+		<footer style="width:100%; background-color: red ; height:100px;">
+			<!-- phần kết thúc của 1 trang web -->
+			<h2>Đây là footer</h2>
+		</footer>
+		<!-- dear 
+		content 
+		thank -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Văn Long"/>
+	<meta name="keyword" content="bài tập css, html"/>
+	<meta name="description" content="trang web bài tập css, html">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>bài tập menu dọc</title>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		aside.menu_doc{
+			font-family: "VNI-Franko";
+			font-size: 15px;
+			width: 200px;
+
+		}
+		aside.menu_doc > ul>li{
+			margin:2px 0;
+			height: 35px;
+			line-height: 35px;
+			text-indent: 15px;
+			list-style: none;
+			background-color: #52F378;	
+		}
+		a{
+			color: black;
+			text-decoration: none;
+		}
+		aside.menu_doc>ul>li:hover{
+			background-color: #CFCCCC;
+		}
+		/* position */
+		/* dropdown menu c1 */
+		ul.dropmenu1{
+			display: none;
+		}
+		
+		aside.menu_doc ul li:hover ul.dropmenu1{
+			display: block;
+			left: 100%;	
+		}
+		aside.menu_doc ul li:hover ul.dropmenu1 li{
+			background-color:#52F378 ;
+			width: 200px;
+			margin: 1px 0 0 0;
+		}
+		ul li.parent1{
+			position: relative;
+
+		}
+		aside.menu_doc ul li:hover ul.dropmenu1{
+			position: absolute;
+			display: inline;
+			list-style-type: none;
+		}
+		/* dropdown menu c2 */
+		ul li ul li.dropdownmenu2{
+			display: none;
+		}
+	
+		
+		ul.dropdownmenu2{
+			display: none;
+		}
+		.parent2{
+			position: relative;
+		}
+
+		.menu_doc ul li ul li:hover ul.dropdownmenu2{
+			position: absolute;
+			display: inline;
+			left: 100%;	
+			list-style-type: none;
+		}
+	</style>
+	<noscript>Trình duyệt không hỗ trợ javascript</noscript>
+</head>
+<body>
+	<aside class="menu_doc">
+	    <ul>
+	        <li class="parent1">
+	        	<a href="#">Trang chủ</a>
+	        	<ul class="dropmenu1">
+        	        <li  class="parent2">
+        	        	<a href="#">Bongda</a>
+        	        	<ul class="dropdownmenu2">
+		        	        <li><a href="#">Bongda</a></li>
+		        	        <li><a href="#">dantri</a></li>
+		        	        <li><a href="#">baomoi</a></li>
+		        	        <li><a href="#">vnexpress</a></li>
+		        	    </ul>
+        	        </li>
+        	        <li><a href="#">dantri</a></li>
+        	        <li><a href="#">baomoi</a></li>
+        	        <li><a href="#">vnexpress</a></li>
+        	    </ul>
+	        </li>
+	        <li >
+	        	<a href="#">Tin tức</a>
+        	    <ul class="dropmenu1">
+        	        <li><a href="#">Bongda</a></li>
+        	        <li><a href="#">danchi</a></li>
+        	        <li><a href="#">baomoi</a></li>
+        	        <li><a href="#">vnexpress</a></li>
+        	    </ul>
+	        </li>
+	        <li>
+	        	<a href="#">Sản phẩm</a>
+	        </li>
+	        <li><a href="#">Liên hệ</a></li>
+	    </ul>
+	</aside>
+</body>
+</html>

@@ -1,0 +1,4 @@
+@import "cssdenhung.css";
+input[type="text"]{
+	width: 500px;
+}
