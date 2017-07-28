@@ -1,0 +1,85 @@
+body{ background: #BCBCBC; text-align: center;}
+
+#container{ 
+    background: none repeat scroll 0 0 #002738;
+    border: 1px solid #C5C5C5;
+    color: #FFFFFF;
+    margin: 0 auto;
+    text-align: center;
+    width: 600px;
+    display: table;
+}
+
+#content-light,#content-dark{ float:left; width: 240px; padding:30px; min-height: 230px;}
+
+#content-light{background:#ebebeb;  }
+#content-dark{ background: #303030;}
+
+#container fieldset{ margin-bottom: 15px;}
+ 
+.switch{
+    border:none;
+    background-image: url('images/switch.png');
+    background-position: left;
+    width:105px;
+    height:46px;
+}
+
+.switch-2{
+    width: 76px;
+    height: 33px;
+}
+
+.switch-3{
+    width: 75px;
+    height: 31px;
+
+}
+
+.switch-4{
+    width: 118px;
+    height: 46px;
+}
+
+.switch-5{
+    width: 81px;
+    height: 34px;
+}
+
+.switch-6{
+    width: 114px;
+    height: 42px;
+   
+}
+
+.switch-7{
+    width: 118px;
+    height: 47px;
+   
+}
+
+.switch-8{
+    width: 76px;
+    height: 30px;
+   
+}
+
+.switch,.switch-2,.switch-8,.switch-7,.switch-6,.switch-5,.switch-4,.switch-3{
+    border:none;
+    background-repeat: no-repeat;
+    margin:0;
+    padding: 0;
+}
+ 
+.on, .off{
+    width:63px;
+    height:40px;
+    display:table-cell;
+    cursor:pointer;
+    text-indent: -10000px;
+    
+}
+
+
+ 
+.result{clear:both; background: #555;color:#fff; padding:10px;}
