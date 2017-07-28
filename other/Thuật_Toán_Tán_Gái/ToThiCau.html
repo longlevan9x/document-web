@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en-US">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <title>Tớ thích cậu thật đấy!</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script src="js/totinh.js"></script>
+</head>
+    <body onMouseMove="checkObj(event,document.forms[0].elements[1]);" onKeyPress="return false;">
+       
+		  <!--End Audio-->
+	
+	<div class="main">
+	<div class="top">
+		<div class="anh1">
+			<img src="images/text.png">
+		</div>
+		<div class="anh2"><img src="images/hainguoi.jpg" width="100px"></div>
+	</div>
+		<div id="menu_nhac" class="left">
+
+			<div class="nhac">
+				<span class="tenbaihat">1. Tớ thích Cậu</span>
+				<button class="btn" onclick="play();">play</button>
+				<button class="btn" onclick="stop();">Pause</button>	
+
+				 <audio controls id="audio" style="display: none">
+						<!-- chèn âm thanh vào đây! -->
+						<!-- chỉ cần thay đổi đường dẫn của thẻ src -->
+		         		<source src="audio/tothichcau.mp3" type="audio/mp3">
+
+		         </audio>
+	        </div>
+	        <div class="nhac1">
+
+	        	<span class="tenbaihat">2. Duyên Phận- hotgirl jangmi</span>
+
+				<button class="btn1" onclick="play1();">play</button>
+				<button class="btn1" onclick="stop();">Pause</button>	
+
+				 <audio controls id="audio1" style="display: none">
+						<!-- chèn âm thanh vào đây! -->
+						<!-- chỉ cần thay đổi đường dẫn của thẻ src -->
+		         		<source src="audio/duyenphan.mp3" type="audio/mp3">
+
+		         </audio>
+	        </div>
+	        <div class="nhac2">
+	        	<span class="tenbaihat">3. Khóc trong mưa-Thiên Ân</span>
+	        	
+				<button class="btn2" onclick="play2();">play</button>
+				<button class="btn2" onclick="stop();">Pause</button>
+				
+				 <audio controls id="audio2" style="display: none">
+						<!-- chèn âm thanh vào đây! -->
+						<!-- chỉ cần thay đổi đường dẫn của thẻ src -->
+		         		<source src="audio/khoctrongmua.mp3" type="audio/mp3">
+
+		         </audio>
+	        </div>
+	        <div class="nhac3">
+	        	<span class="tenbaihat">4. Mới đó mà- Dương565</span>
+
+				<button class="btn3" onclick="play3();">play</button>
+				<button class="btn3" onclick="stop();">Pause</button>
+
+				 <audio controls id="audio3" style="display:none">
+						<!-- chèn âm thanh vào đây! -->
+						<!-- chỉ cần thay đổi đường dẫn của thẻ src -->
+		         		<source src="audio/moidoma.mp3" type="audio/mp3">
+
+		         </audio>
+	        </div>
+
+		</div><!--end  menu_nhac-->
+		<div class="right">
+
+			 <audio controls id="mac_dinh" style="display:none">
+						<!-- chèn âm thanh vào đây! -->
+						<!-- chỉ cần thay đổi đường dẫn của thẻ src -->
+		         		<source src="audio/lamvoanhnhe.mp3" type="audio/mp3">
+
+		         </audio>
+					<div class="btn_both">
+					 <input type="button" value="Tớ đồng ý" onclick="mac_dinh();">
+					  <input type="button" value="Không nhé!" onMouseOver="moveObj(this);" 
+					  onclick="click_dong_y();">
+			    	</div>
+		</div><!--end button dong y or ko dong y-->
+
+		<div class="footer">
+			<p> <span id="cuoi">writen by </span>: Tiểu đội chim cò</p>
+			<br>
+			
+		</div>
+		
+     </div> <!--end div main-->
+     
+</body>
+</html>

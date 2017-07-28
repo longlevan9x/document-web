@@ -1,0 +1,60 @@
+/*căn chỉnh chung*/
+body{  height: 500px ; background-image: url('../images/sao.gif');}
+.main{ height: 100%;width: 100%  }
+.top{ width: 100%; height: 15%; }
+.left{float: left; height: 70%; width: 25%}
+.right{height: 70%;width: 75%;margin-left: 25%;}
+.footer{width: 100%; height: 15%;}
+/*anh cua trang web*/
+	.anh1{ float: left; }
+
+/*chỉnh giữa các bài hát*/
+.nhac,.nhac1,.nhac2,.nhac3{ padding: 15px 0px 0px 3px }
+/*ten bai hat*/
+.tenbaihat{ color:#20B2AA ;font-style: italic; font-weight: bold}
+/*nút Play và pause*/
+.btn{
+	background: #6495ED;
+	border-radius: 10%; 
+	box-shadow: 10px 10px 10px 10px;
+	color: white; cursor: pointer; }
+.btn:hover{background: white; color:#2E8B57; transition: 1s}
+.btn1{
+	background: #A52A2A;
+	border-radius: 10%; 
+	box-shadow: 10px 10px 10px 10px;
+	color: white; cursor: pointer; 
+}
+.btn1:hover{background: white; color:#2E8B57; transition: 1s}
+.btn2{
+	background: #BDB76B;
+	border-radius: 10%; 
+	box-shadow: 10px 10px 10px 10px;
+	color: white; cursor: pointer; 
+}
+.btn2:hover{background: white; color:#2E8B57; transition: 1s}
+.btn3{ 
+	background: #008000;
+	border-radius: 10%; 
+	box-shadow: 10px 10px 10px 10px;
+	color: white; cursor: pointer; 
+}
+.btn3:hover{background: white; color:#2E8B57; transition: 1s}
+/*nut dong y va ko dong y:*/
+.btn_both{ margin: 10% 0px 0px 30%;}
+.btn_both>input{border-radius: 10%; box-shadow: 10px 10px 10px 10px; color: white; cursor: pointer;}
+.btn_both>input:first-child{background: #0000CD}
+.btn_both>input:first-child:hover{background: white; color: #0000CD; transition: 1.5s}
+.btn_both>input:last-child{background: #B22222}
+.btn_both>input:last-child:hover{background: white; color: #B22222; transition: 2s}
+/*phan cuoi trang */
+.footer>p{ 
+	font-size: 15px; 
+	color: #90EE90;
+	box-shadow: 10px 10px 10px 10px;
+	text-align: center;
+	margin-top: 5%;
+	position: fixed;
+	width: 100%;
+ }
+ #cuoi{ color: #FFF8DC }
