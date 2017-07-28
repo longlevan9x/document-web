@@ -1,0 +1,158 @@
+/* Reset Css */
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,b, i,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,footer, header, menu, nav, section, summary,time, mark, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	background: transparent;
+	vertical-align: baseline;
+}
+body{
+	line-height: 1;
+}
+/* HTML 5 */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{ 
+	display: block;
+}
+hr{
+	display:block;
+	height:1px;
+	border:0;
+	border-top:1px solid #ccc;
+	margin:1em 0;
+	padding:0;
+} 
+ul,ol{
+	list-style: none;
+}
+blockquote,q{
+	quotes: none;
+}
+blockquote::before, blockquote::after,q::before, q::after {
+	content: "";
+	content: none;
+}
+a{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+	border: 0;
+}
+input,textarea,select {
+font-size:100%;
+vertical-align: middle;
+}
+:focus{
+	outline: 0;
+}
+ins{
+	background-color:#ff9;
+	color:#000;
+	text-decoration: none;
+}
+del{
+	text-decoration: line-through;
+}
+
+.floatleft{
+	float: left;
+}
+.floatright{
+	float: right;
+}
+.clearfix{
+	clear: both;
+	display: inline-block;
+}
+.clearfix::after{
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    display: inline;
+    zoom: 1;
+}
+
+
+ 
+button,html input[type="button"],/* 1 */
+input[type="reset"],input[type="submit"] {
+    -webkit-appearance: button;/* 2 */
+    cursor: pointer;/* 3 */
+    overflow: visible;/* 4 */
+}
+
+/*
+* 1.thêm thiết lập nội dung trong  IE 8/9.
+* 2. loại bỏ padding in IE 8/9.
+* 3. loại bỏ padding in IE 7.
+* Chú ý: Vẫn có tồn tại trong IE 6.
+*/
+ 
+input[type="checkbox"],input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    height: 13px; /* 3 */
+    width: 13px;/* 3 */
+ 	cursor: pointer;
+}
+/*
+* Đặt lại con trỏ mặc đinh cho các element disabled
+*/
+ 
+button[disabled],input[disabled] {
+    cursor: default;
+}
+
+
+/*
+* 1. Áp dung với chrome 51 và safari 5
+* 2. Thêm border-box trong Safari 5 and Chrome
+(bao gồm cả mozila)
+*/
+ 
+input[type="search"] {
+    -webkit-appearance: textfield;/* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;/* 2 */
+    box-sizing: content-box;
+}
