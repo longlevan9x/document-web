@@ -1,0 +1,32 @@
+/*
+* Code by Đại Nguyễn
+* Facebook: http://facebook.com/deekey.hn
+* Email: daikupj@gmail.com
+* Rất vui nếu được Donate :D
+*/
+
+*** GIỚI THIỆU ***
+* Đây là source code nhắn tin SMS miễn phí của mình viết bằng PHP và giao diện đơn giản của Bootstrap, không lòe loẹt vì mình thích đơn giản và cải thiện tốc độ load. Mình chia sẻ cho các bạn dùng tùy mục đích khác nhau. Bác nào có ý tưởng hay hơn thì có thể phát triển tiếp tục nhé. Không dài dòng văn tự vào vấn đề chính luôn :D 
+
+*** HƯỚNG DẪN DÙNG ***
+- Tải source code mình chia sẻ, upload lên thư mục 'public_html' của hosting. Giải nén ra sẽ có database nén sẵn ở trong
+- Tạo CSDL rồi config đúng thông số trong file 'database.php'. Sau đó Import file 'sms-database.sql' vào CSDL
+
+*** HƯỚNG DẪN THÊM TÀI KHOẢN TEXTLOCAL ***
+- Truy cập http://textlocal.com/signup đăng kí tài khoản, điền đầy đủ Họ tên + Email
+- Truy cập link TEXTLOCAL gửi trong Email của bác và tiến hành hoàn tất đăng kí, nếu thành công bác sẽ được dùng thử 10 Credit. Tương đương 16 SMS (1 SMS = 0.6 Credit)
+- OK. Có tài khoản rồi bác truy cập vào CSDL, chọn bảng 'credits' và thêm tài khoản vào đây. Chú ý nếu bảng này ko tự động thêm ID thì nhớ thêm thủ công nhé
+- Gần xong rồi :D Các bác tìm đến file 'auto-add-credit.php' điền mật khẩu của tài khoản Textlocal vừa đăng kí là xong.
+
+*** CÁCH THÊM NHIỀU SMS MÀ KHÔNG MẤT TIỀN (HAHA) ***
+	Đầu tiên phải nói qua với các bác. Trước đây mình có mua SMS theo gói của Textlocal thấy giá cũng rẻ, nhưng mới đây thấy nó có miễn phí 10 Credit cho
+	mỗi tài khoản đăng kí hợp lệ mới. Thế là nảy sinh ý tưởng gian lận chúng nó bằng cách đăng kí nhiều tài khoản, thế là có nhiều SMS, tính thế này nhé: 1 tài khoản có 10-16 SMS, vậy 10 tài khoản có 100-160 SMS ngon lành. Cứ thế các bác mạnh dạn nhân con số SMS lên. Có khi còn mở được cả dịch vụ SMS Marketing luôn ý chứ :D Haha. Ngon chưa. Nhưng vấn đề hết SMS mình lại phải thay thủ công mệt chết. Thế là do lười nên mình code luôn chức năng auto thay tài khoản mới khi tài khoản cũ hết tiền. Vậy là ung dung nhắn hết SMS thì thôi không phải lo điều gì :D Cứ vậy thôi, đăng kí được tài khoản nào lại vào CSDL thêm vào thôi :))
+
+	* Nói vậy nhưng xin lưu ý với các bác. Ở trên mình có nói tài khoản hợp lệ? Các bác chú ý, Fake info sang US hoặc UK để không bị khóa tài khoản. Nhớ đăng kí mỗi lần phải Fake IP nhé, ko là kiểu gì cũng ăn block luôn, hoặc không block thì sẽ không được tặng Credit nhé. Nếu đã bị block là phải chuyển cả hosting luôn các bác nhé vì nó cho IP Hosting các bác vào danh sách đen rồi :D (Đấy là do em dùng thấy vậy chứ không biết thế nào)
+
+	* Dấu hiệu nhận biết block: kiểm tra trong database mà vẫn còn Credit mà khi truy cập trang bị báo lỗi không kết nối được tài khoản thì xin chúc mừng bác đã bị ăn block của Textlocal.
+
+
+XONG! Chúc các bác thành công!
+
+
